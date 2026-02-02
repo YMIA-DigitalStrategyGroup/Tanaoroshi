@@ -1,0 +1,63 @@
+{
+  "Name": "棚卸開始",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": [
+        {
+          "Name": "棚卸対象月",
+          "DataValidationInfo": {}
+        }
+      ]
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸対象月"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "delete from `ymia_t_tanaoroshi_data` where `TARGET_YEAR_MONTH`=?棚卸対象月",
+      "ID": "f2aa9c08ea6a4711b4b2cd4250cd71e5"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸対象月"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "INSERT \r\nINTO remacsweb.ymia_t_tanaoroshi_data( \r\n    `TANAM_NBR`                                 -- レコードNo\r\n    , `TARGET_YEAR_MONTH`                       -- 対象年月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\n) \r\nSELECT\r\n      `TANAM_NBR` \r\n    ,  ?棚卸対象月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\nFROM\r\n    remacsweb.ttanam \r\n\r\n",
+      "ID": "a9bfe3632ea84c67aa24491621a6f47c"
+    }
+  ]
+}

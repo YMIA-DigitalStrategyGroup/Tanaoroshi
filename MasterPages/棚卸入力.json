@@ -1,0 +1,126 @@
+{
+  "Rows": {
+    "Count": 34
+  },
+  "Cols": {
+    "Count": 64
+  },
+  "AttachInfos": {
+    "0,0": {
+      "CellType": {
+        "$type": "Forguncy.CustomMenu.ForguncyMenuCellType, Forguncy.CustomMenu",
+        "TemplateKey": "_RS_Dark_ThemeStyle2",
+        "Items": [
+          {
+            "Text": "棚卸入力",
+            "IconPath": "Navigation/165_home_3.svg",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "棚卸入力画面"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Text": "棚卸開始",
+            "IconPath": "Navigation/183_table_2.svg",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+                "PageName": "棚卸開始登録"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          }
+        ],
+        "Orientation": 0,
+        "MenuLevelsStyle": [
+          {
+            "FontSize": 17.3333333333333,
+            "Height": 45.0,
+            "Width": 200.0,
+            "IconHeight": 24.0,
+            "IconWidth": 24.0
+          },
+          {
+            "FontSize": 16.0,
+            "Height": 32.0,
+            "Width": 200.0,
+            "IconHeight": 24.0,
+            "IconWidth": 24.0
+          }
+        ]
+      }
+    },
+    "0,53": {
+      "CellType": {
+        "$type": "Forguncy.CurrentUserCellType, ServerDesignerCommon",
+        "CellCustomValue": "%CurrentUser%",
+        "ShowCircleUserPicture": true,
+        "NavigateSettingWhenLogout": {
+          "NavigateWhenLogoutMode": 1
+        }
+      }
+    },
+    "2,0": {
+      "IsPlaceHolderCell": true
+    }
+  },
+  "StyleDatas": {
+    "Types": {
+      "Strs": [
+        "Body"
+      ]
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "2,0,32,64",
+    "0,0,2,53",
+    "0,53,2,11"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.MasterPage, ServerDesignerCommon",
+    "PageLoadedCommandList": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  },
+  "BackgroundPictures": [
+    {
+      "FitToBrowserWidth": true,
+      "FitToBrowserHeight": true,
+      "Repeat": true,
+      "Name": "515397b3-ef9b-4f31-a45b-aa3c3ce18665",
+      "DisplayName": "背景画像1",
+      "ForguncyPictureName": "PCMasterBackground",
+      "ForguncyPictureSourceType": 2,
+      "Stretch": 2,
+      "Size": "200,110"
+    },
+    {
+      "Name": "d7fb6181-e71a-4167-8b3d-6a2865f62b2a",
+      "DisplayName": "背景画像2",
+      "ForguncyPictureName": "PCMasterBanner",
+      "ForguncyPictureSourceType": 2,
+      "Stretch": 3,
+      "Size": "1280,0"
+    }
+  ]
+}//TQNT/DnSPTLnpJxUne9RGKeplNmXrjYol42XuTjME62xteN942g/jLnnICylLCL1ESo5z4iKW4dSZEDRJVrjjpSAIvBj3POaozKaOEftom+3eDemzdV9UAskKdwODhQsHOJF6vhNX7NyTBHvVKMdoNNRGFc1YzCtidUkRo5VKLDAhWC2n5IT+qSm8ws2o+1ZgDZLosTaM5a3SoAi5rBmhxbP4O7UwENCumwJdqnq7gsddJ+7sRqTiL2bf5g3AYpw5v9Att6phjo/JmcAKUmc8vQcAO6TtbpCQYA4uVvUZ/4zf6ZMwiLA4b1NG4SFIchBPWiefcBdLb3MPMbN4PuW5BJ6Fc60M078dbEWTj+7oHCb5hgpQyIpL5ZJOVbOH8xTZzF2Xi+UUp98LP4tk+UgkED3VhwwLtmwO8UQ0CLKLRRioDpPbp6edwSZaM3JNMiJqRoeJtDxIRUuFkJFg3EUGqBkq7B2rbPoC5FxUj+w/ZDsMyd7C6qdOuvvD1EXRzmKPDTTAGZxb6iqZnc8EcCMS0wd7Rk0JiQoq3B1/9Cj9h/TgbfSziQE/DNSBUiLtsjIFh0FcEWfQtyiT6ERfPvXllOpn9/15qlTU8QJomhvdfoU4N/oUugXZB0ZAliE90HhP4CBOqMkqQV0BE//2Fa+gQ+GJZIetzSbH4+lyKA4D4rOXeOD3eSCJOu1+6XTdBfWeUQaLE0jPAb9aIr545+VICYGeMQ4CX9mEjIZc3mjC8r9H1Zihrz157OLWgImolgSKHDLhfPnr8ZxtgAkr8lkxxMLCN3FZ5X6ryDMWDqGgWhP7/zKuExQiZRqLFBAybRMregJgVB/RmPOuSol4/r6dOZQZ+QTFfDtcnndFn+J2Ef4vrj1fEGpBKwId/KhrWn1d/E4gFO4cN7TGQvHpCvltg==|920

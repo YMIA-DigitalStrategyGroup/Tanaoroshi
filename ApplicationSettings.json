@@ -1,0 +1,38 @@
+{
+  "IntegrateWithOtherApplication": {
+    "Password": "6RooMaZCOR@i"
+  },
+  "ShareCommandContainers": [],
+  "ListviewLoadingIndicatorSettings": {},
+  "GlobalProperties": [],
+  "WebSitePort": 35705,
+  "UserServicePort": 54495,
+  "StartPage": "集計画面",
+  "StartDateFiscalYear": 4,
+  "BaseOnStartingMonth": true,
+  "MultipleLanguageSettings": {
+    "Languages": [
+      {
+        "Name": "ja",
+        "IsDefault": true,
+        "Description": "組み込みの日本語は削除できません。",
+        "IsBuildIn": true,
+        "LanguageAttribute": "ja",
+        "FontFamily": "Body"
+      },
+      {
+        "Name": "en",
+        "Description": "組み込みの英語は削除できません。",
+        "IsBuildIn": true,
+        "LanguageAttribute": "en",
+        "FontFamily": "Calibri"
+      }
+    ],
+    "PublicResource": {},
+    "RuntimeBuiltInResource": {
+      "FrontEndResources": {},
+      "ServerResources": {}
+    },
+    "PluginResource": {}
+  }
+}

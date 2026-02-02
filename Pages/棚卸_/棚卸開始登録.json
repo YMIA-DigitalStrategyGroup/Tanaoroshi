@@ -1,0 +1,468 @@
+{
+  "Rows": {
+    "InLogicalVisibleIndexes": [
+      0
+    ],
+    "Count": 11
+  },
+  "Cols": {
+    "Count": 22
+  },
+  "Values": {
+    "0,1": "本日日付",
+    "0,18": "件数",
+    "3,1": "棚卸対象月",
+    "7,1": "棚卸情報\r\n取込",
+    "7,12": "終了"
+  },
+  "Formulas": {
+    "0,6": "TODAY()"
+  },
+  "AttachInfos": {
+    "0,12": {
+      "CellType": {
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "CellDefaultValue": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=棚卸開始登録!G1"
+        },
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "3,8": {
+      "CellType": {
+        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
+        "IsBounding": true,
+        "DataSource": "tkansayo_tanaoroshi",
+        "ValueColumnBindingInfo": {
+          "TableName": "tkansayo_tanaoroshi",
+          "ColumnName": "TARGET_YEAR_MONTH",
+          "GUID": "26630233-3071-4e57-b5e9-dadf08dcf326"
+        },
+        "DisplayColumnBindingInfo": {
+          "TableName": "tkansayo_tanaoroshi",
+          "ColumnName": "TARGET_YEAR_MONTH",
+          "GUID": "66548d14-aee0-46f8-b285-0d481b4a1589"
+        },
+        "ItemsSort": {
+          "OrderByColumns": [
+            {
+              "ColumnBindingInfo": {
+                "TableName": "tkansayo_tanaoroshi",
+                "ColumnName": "TARGET_YEAR_MONTH",
+                "GUID": "5eced772-e82b-4078-a549-5ead4813f63a"
+              },
+              "Order": 1
+            }
+          ]
+        }
+      }
+    },
+    "7,1": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.Commands.SetParameterCommand, ServerDesignerCommon",
+            "ParameterName": "レコード件数",
+            "TableValue": {
+              "TableName": "ymia_t_tanaoroshi_data",
+              "TableValueType": 3,
+              "SqlCondition": {
+                "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                "ColumnBindingInfo": {
+                  "TableName": "ymia_t_tanaoroshi_data",
+                  "ColumnName": "TARGET_YEAR_MONTH",
+                  "GUID": "8a99dae1-d6f1-4ec8-ba69-a473bb0c129e"
+                },
+                "Value": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=棚卸開始登録!I4"
+                }
+              }
+            },
+            "ID": "6a0b2aefa46a416599696eba544d92cd"
+          },
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "Condition": {
+                  "$type": "Forguncy.Model.IfCondition, ServerDesignerCommon",
+                  "param": {
+                    "$type": "Forguncy.Model.IfConditionPageElementParam, ServerDesignerCommon",
+                    "cellLocations": [
+                      {
+                        "SerializeProperty": "=棚卸開始登録!レコード件数"
+                      }
+                    ]
+                  },
+                  "value": "0",
+                  "compareType": 2
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+                    "ConditionAndCommandPairList": [
+                      {
+                        "ConfirmDialogSettings": {
+                          "Title": "確認",
+                          "FormulaText": "既に棚卸が実行されていますが、データを作成しなおしますか？",
+                          "YesButtonText": "はい",
+                          "NoButtonText": "いいえ",
+                          "ConfirmIcon": 1
+                        },
+                        "CommandList": [],
+                        "ID": "2607a62a-6ade-4b05-9ce8-f2782cef7476"
+                      },
+                      {
+                        "CommandList": [
+                          {
+                            "$type": "Forguncy.Model.StopCommand, ServerDesignerCommon"
+                          }
+                        ],
+                        "ID": "206b0ec5-b80b-4407-abe5-3e53c01c35db"
+                      }
+                    ]
+                  }
+                ],
+                "ID": "7344ed40-7692-4f03-9d15-1919e3e87736"
+              }
+            ]
+          },
+          {
+            "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
+            "ConditionAndCommandPairList": [
+              {
+                "ConfirmDialogSettings": {
+                  "Title": "確認",
+                  "FormulaText": "棚卸を開始しますか？",
+                  "YesButtonText": "はい",
+                  "NoButtonText": "いいえ",
+                  "ConfirmIcon": 1
+                },
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
+                    "ServerCommandName": "棚卸開始",
+                    "Parameters": [
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "ParamName": "棚卸対象月",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=棚卸開始登録!I4"
+                        }
+                      }
+                    ],
+                    "RefreshAfterFinish": true,
+                    "CheckDataValidation": true
+                  },
+                  {
+                    "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+                    "MessageFormula": "棚卸情報を読み込み、棚卸を開始します！！"
+                  }
+                ],
+                "ID": "447ea397-6113-450c-b512-f22892c8d56c"
+              }
+            ]
+          }
+        ],
+        "Text": "棚卸情報\r\n取込",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    },
+    "7,12": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ClosePopupCommand, ServerDesignerCommon"
+          }
+        ],
+        "Text": "終了",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0
+      },
+      {
+        "FontFamily": 0,
+        "Formatter": 1
+      },
+      {
+        "FontFamily": 0,
+        "Formatter": 2
+      },
+      {
+        "Background": 3,
+        "FontFamily": 0,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 0,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderTop": 0
+      },
+      {
+        "BorderTop": 0,
+        "BorderRight": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderLeft": 0
+      },
+      {
+        "BorderBottom": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontSize": 24.0,
+        "WordWrap": true
+      },
+      {
+        "Background": 5,
+        "FontFamily": 0,
+        "FontSize": 24.0
+      },
+      {
+        "FontSize": 26.666666666666664
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "[AUTO]General",
+        "@",
+        "Accent 1 80",
+        "black",
+        "Accent 1 60"
+      ],
+      "Borders": [
+        {
+          "Color": 4
+        }
+      ]
+    },
+    "CellStyles": {
+      "0,0": 0,
+      "0,1": 1,
+      "0,2": 0,
+      "0,3": 0,
+      "0,4": 0,
+      "0,5": 0,
+      "0,6": 0,
+      "0,7": 0,
+      "0,8": 0,
+      "0,9": 0,
+      "0,10": 0,
+      "0,11": 0,
+      "0,12": 2,
+      "0,13": 0,
+      "0,14": 0,
+      "0,15": 0,
+      "0,16": 0,
+      "0,17": 0,
+      "0,18": 0,
+      "0,19": 0,
+      "0,20": 0,
+      "1,0": 0,
+      "1,1": 0,
+      "1,2": 0,
+      "1,3": 0,
+      "1,4": 0,
+      "1,5": 0,
+      "1,6": 0,
+      "1,7": 0,
+      "1,8": 0,
+      "1,9": 0,
+      "1,10": 0,
+      "1,11": 0,
+      "1,12": 0,
+      "1,13": 0,
+      "1,14": 0,
+      "1,15": 0,
+      "1,16": 0,
+      "1,17": 0,
+      "1,18": 0,
+      "1,19": 0,
+      "1,20": 0,
+      "1,21": 0,
+      "2,0": 0,
+      "2,1": 0,
+      "2,2": 0,
+      "2,3": 0,
+      "2,4": 0,
+      "2,5": 0,
+      "2,6": 0,
+      "2,7": 0,
+      "2,8": 0,
+      "2,9": 0,
+      "2,10": 0,
+      "2,11": 0,
+      "2,12": 0,
+      "2,13": 0,
+      "2,14": 0,
+      "2,15": 0,
+      "2,16": 0,
+      "2,17": 0,
+      "2,18": 0,
+      "2,19": 0,
+      "2,20": 0,
+      "2,21": 0,
+      "3,0": 0,
+      "3,1": 3,
+      "3,2": 4,
+      "3,3": 4,
+      "3,4": 4,
+      "3,5": 4,
+      "3,6": 4,
+      "3,7": 4,
+      "3,8": 5,
+      "3,9": 6,
+      "3,10": 6,
+      "3,11": 6,
+      "3,12": 6,
+      "3,13": 6,
+      "3,14": 7,
+      "3,15": 0,
+      "3,16": 1,
+      "3,17": 0,
+      "3,18": 0,
+      "3,19": 1,
+      "3,20": 0,
+      "3,21": 0,
+      "4,0": 0,
+      "4,1": 4,
+      "4,2": 4,
+      "4,3": 4,
+      "4,4": 4,
+      "4,5": 4,
+      "4,6": 4,
+      "4,7": 4,
+      "4,8": 8,
+      "4,9": 9,
+      "4,10": 9,
+      "4,11": 9,
+      "4,12": 9,
+      "4,13": 9,
+      "4,14": 10,
+      "4,15": 0,
+      "4,16": 0,
+      "4,17": 0,
+      "4,18": 0,
+      "4,19": 0,
+      "4,20": 0,
+      "4,21": 0,
+      "7,1": 11,
+      "7,12": 12,
+      "7,13": 0,
+      "7,14": 0,
+      "7,15": 0,
+      "7,16": 0,
+      "7,17": 0,
+      "7,18": 0,
+      "7,19": 0,
+      "7,20": 0,
+      "8,12": 0,
+      "8,13": 0,
+      "8,14": 0,
+      "8,15": 0,
+      "8,16": 0,
+      "8,17": 0,
+      "8,18": 0,
+      "8,19": 0,
+      "8,20": 0,
+      "9,12": 0,
+      "9,13": 0,
+      "9,14": 0,
+      "9,15": 0,
+      "9,16": 0,
+      "9,17": 0,
+      "9,18": 0,
+      "9,19": 0,
+      "9,20": 0,
+      "10,1": 13,
+      "10,2": 13,
+      "10,3": 13,
+      "10,4": 13,
+      "10,5": 13,
+      "10,6": 13,
+      "10,7": 13,
+      "10,8": 13,
+      "10,9": 13,
+      "10,10": 13,
+      "10,11": 13,
+      "10,12": 13,
+      "10,13": 13,
+      "10,14": 13,
+      "10,15": 13,
+      "10,16": 13,
+      "10,17": 13,
+      "10,18": 13,
+      "10,19": 13,
+      "10,20": 13
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "0,6,1,5",
+    "3,1,2,7",
+    "0,12,1,5",
+    "7,1,3,9",
+    "7,12,3,9",
+    "3,8,2,7",
+    "0,20,1,2"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_LoginUser"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  }
+}//odHWiKTDHrddRcyXK1mk/eA2vcCG3h7s34MIjdfgjViz1lQ5j4A3BXEqqkcUUj/ItYSttgtUxo2i5xVEISIFkNDXvsVio/h9EzHO00KlIHRqxL9vkK/MTk9hkNozsxCu4/g48JCWex2uiKdv1rh8m3tugrltCONNQfaYGpjTUKVM8uWxx6UH7cBV4lUkcqCsheu0UY/wbO2CNRmIpWlbAqBwdhn4Gur7Gj4f4dwOiIOTDYdsImm8DUhMWBc3VG2EL7rL3yrWL4/OQD4UV32D/dnC/2jJpS24J5QKHcDvt5hYq6GD6pJxHnLJ2A+yHBqH5hv562J5+e94AJc3f6cn1SVwvLeoeidw8cQCk5uEe7oXS9o1W69C196SMUoQVxeYyqE1bJEoMHBk2xvESwCWDGmy+/UC0aPKx6TzZ9DrE/hnYvTquZ/rSuAZ6CfT+wTsK4d9b0SJ/NNOHZdKuqXWOpHXZ8Y++2vuzQQY9Rxc1Hsn+wYFovI0C33QJM0HS5MqSAsajjvVpjuncJntcj2oX9rIos3c2wnk6tCosD2WnPIcVry35Npcdcud6qlxKZRkmBMx8hdXhQc3csZXxkRSMrhgbhLh7ti1u/GExm1yVU3+Os4MxjiPwkRpBebRpbtLUSwM3AOSGB+Yb9JJxgdJSa5IVUaW1Awls0AU7Bherz0EqhgpvHSQ394qxSLfM5qUaf6ULOxkaGb72Eoa4xgDWODtszNXekkiOHFCCsvZ1HQ6bZ6rmQ8GL4T1wExeIO/WtJRx6vvJywTldUeGiaYVcT3HRuCUIKWDCPpx3KBKB0SCF3eQ8JnJmPRHA9x0v30DgirGpY+++VddBa69RJOjNJVbgDYOCbbHNapDG0ehXhimS6c1k1cfkz/cEbJ9M1fhz9buKpf3PBfmrNgc6R4q9w==|920

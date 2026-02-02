@@ -1,0 +1,67 @@
+{
+  "Name": "部品数量集計",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": [
+        {
+          "Name": "棚卸月",
+          "DataValidationInfo": {},
+          "TestData": "202509"
+        }
+      ],
+      "InvokeTriggerTestData": {
+        "UserName": "Administrator"
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸月"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "DELETE FROM ymia_t_tanaoroshi_data\r\nWHERE TARGET_YEAR_MONTH = ?棚卸対象月",
+      "ID": "1b3a153a0e954c1db59aafd2608d3d27"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸月"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "INSERT INTO ymia_t_tanaoroshi_data\r\nSELECT \r\n    dt.TARGET_YEAR_MONTH,\r\n    mh.TANABAN,\r\n    dt.Z_FLAG,\r\n    '0',\r\n    dt.HINBAN,\r\n    0,\r\n    SUM(dt.TANA_SU)\r\nFROM \r\n    ymia_t_tanaoroshi_datainput dt\r\nLEFT JOIN (\r\n        SELECT \r\n            TANABAN, \r\n            HINBAN\r\n        FROM \r\n            mhinban\r\n        WHERE (HINBAN, KAITEI_SEQ_NBR) IN (\r\n                SELECT \r\n                    HINBAN, \r\n                    MAX(KAITEI_SEQ_NBR)\r\n                FROM \r\n                    mhinban\r\n                GROUP BY \r\n                    HINBAN\r\n            )\r\n    ) mh \r\n    ON dt.HINBAN = mh.HINBAN\r\n    where TARGET_YEAR_MONTH = ?棚卸対象月",
+      "ID": "590683339939428cb2ea2fc4e4434834"
+    }
+  ]
+}
