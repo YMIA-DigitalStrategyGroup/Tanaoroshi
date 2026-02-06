@@ -237,12 +237,6 @@
   },
   {
     "ModuleName": "PCPage/仕様書",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-02-06T18:00:58.4311729+09:00",
     "ModuleType": 1
   }
 ]
