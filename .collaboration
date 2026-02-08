@@ -237,6 +237,16 @@
   },
   {
     "ModuleName": "PCPage/仕様書",
-    "ModuleType": 1
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-02-09T07:32:16.4360334+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\棚卸_\\仕様書.json",
+      "Pages\\棚卸_\\仕様書.rd"
+    ]
   }
 ]
