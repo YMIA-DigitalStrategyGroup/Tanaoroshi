@@ -12,19 +12,21 @@
     "4,9": "ttanam",
     "4,29": "ymia_t_tanaoroshi_datainput",
     "6,5": "↓",
-    "6,6": "棚卸開始",
+    "6,6": "部品数量集計",
     "6,25": "↓",
-    "6,26": "部品数量集計（全件洗い替え）",
+    "6,26": "部品数量集計",
+    "7,6": "insert",
     "8,1": "スマホでの実棚数",
-    "8,19": "PC",
-    "8,21": "二次集計",
+    "8,21": "２次集計情報",
+    "8,30": "棚卸実数を品番で集計",
     "9,10": "←　部品数量集計",
     "10,11": " update",
     "11,9": "ymia_t_tanaoroshi_data",
-    "11,29": "ymia_t_tanaoroshi_datainput2ji",
     "12,9": "理論在庫",
     "13,5": "↓",
     "13,6": "データ作成",
+    "13,10": "←　部品数量集計",
+    "14,11": " insert（あってはダメだが理論在庫がなくて、実数があるもの）",
     "15,1": "CSVデータ出力"
   },
   "StyleDatas": {
@@ -178,6 +180,7 @@
       "5,28": 9,
       "5,29": 9,
       "6,5": 6,
+      "6,6": 17,
       "6,25": 8,
       "6,26": 17,
       "6,27": 9,
@@ -275,6 +278,13 @@
       "13,6": 17,
       "13,7": 9,
       "13,8": 9,
+      "13,10": 15,
+      "13,11": 15,
+      "13,12": 15,
+      "13,13": 15,
+      "13,14": 15,
+      "13,15": 15,
+      "13,16": 15,
       "14,5": 8,
       "14,6": 9,
       "14,7": 9,
@@ -516,8 +526,8 @@
     "1,1,4,8",
     "1,21,4,8",
     "8,1,4,8",
-    "8,21,4,8",
-    "15,1,4,8"
+    "15,1,4,8",
+    "8,21,4,8"
   ],
   "PageInfo": {
     "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
@@ -542,4 +552,4 @@
     "PaperSize": {},
     "Margin": {}
   }
-}//5J2ZEonnsAcoVK5lJw4ScihNZLQW1+QHbfEw2Sbm+jZFUciEYx2TLSMfRhTF5Vqwm6HFOmf3mqlKEJi950oyb6EHAy9IOidfJvMHTISJXBzW7Xz3GMHg3wRUP8rNkEvwnW9yI9zVMZu1l5iBtjgZ+b9xnJSSCTbzitZeXuUn0c7dlr25pEp95UHyoCAJhaMQoerYtG+msfzi49kG/90vF49IPSeLWNFIiya4DYDHJMCwczbQuhIlIGrHUIJWeShgj64j6JiuVj/cJgxeL9JPhgB+cukI5EL3rGeXvmniTIYEeK9zsKmUa1O0T0rOMoo0Pk+R7DiEPKRlD1p7kLFpk92C0O4laaH8wiibO3j/5fLIAZZxQoCKT7PLKe1q4XC9xvRmiUiKeTT82EGe25hPLwutbuteXz8hTvqNgKESTiWZIdJbT+SPkdinv0zRUB9MFZY7bIhuaQtHAtGc3ixa6OBwDlT1gJgAAnP2/pgTYnUtS9aE2eg1OEq9WB3zRTLWcaRjhYXQusQq7HMztJ2gMCvd/X3UsGzPuJULc27MtEXZEV/gHQ0DtBW53V1/Es/FIxeaMRPDrFRtjtVEhEpkoPGB4a1N+mheqEi+HCbG/KNFMJ7DgUNdyYPEte6kfZOuJLcs4HHhJKwpvx7IiTQMaEIgv2kUGgSRjy6pjkasgd29j6GbOd4X9Z8gQm4QYIZ6vzLnpBnPpu1KbveynkynB//ioPiTl8EUiw1N3JDhW6yaIAETwsgxyx287QL4cnenCQQY6yOxdyfgsUMi4rl7K2gCqh+hqNSeyOm9TBTINErKrMQphcSp+3OJRrPCtu9wWSdexf3jL7cpNe553kTZPFzqC4Qu4ucdcCAF9eNdVzOWZOQ/WpRIVfxItkEVNdY4KR2+zyzQg16U6FJVDMdU/Q==|920
+}//AH9vcR4vEA0W8wYmbYdApNLH+LVkN1ID5arUpr202yWG72b88LRyR1xnf6dWcR5u+pMunXEsph0hiZja3TsinINDmWuQsOoj3bKDb7xoodVvPdpoiX18H/GCpI+ChnPDmKTc8beL/OAwr5cMAypk0puYd6PGKqFDcKuvHbO3FsT8N7U44hSdSTwVn6qI/ReXBTTLIr63PkjOgjxO/0b6gQLdsZyfvpaMLyhw80V3ECLIjY3eew9Azbx8j2VWZdD3MszxsG13KQPkrJED0U3WK7BR734aOtE+qDnbuiCWQrVapv5+ZYfW3jHVujc01ykyPfDsYqGJYE9mGLeykVDR3tSBfQRXGmHBR/RAPBKwo8VJ0Q720ng0SFvQaTi8Bazv8orjlS7RAPRYeq6FSBoyQusG4XVw4LA2AAt++1aWKa0yec88/u+IRjYHYIq99Hh77WoCjyQ/C4tyDO4cnvpyivwHhBjvInX2i5J59YinSujuS+dD6VHglUkT8OVY79V8l2Yf4Cl+HEagYmrSvgPgOLD5zXSn6ZC2z2T5Bi6LJd703NUI77yYaX7w/3g8CuRMW3oYF6cDT9g676I9NAb5u6iIb1h3LlCiSXc02kxoaytFNxk9DVMf1ulSsJFlqeHiT4yCctexaaJGkAFW8cnysnKB7Yw4GBxPhi8ByNXn+Ifn1LxCayfRRUo4ivwE7nK3oZa54zeQFT+m8r+JdSyaCKKJFno8LMXxW6YCASsFf7U1AZi5GbGrIaExEPz0zH36AxRBMwwE9Jm1Tgb7604mUShHL8NjWmIc5nhdPXivDOYVhhyG5Z90Ce5IRas+KAbG7mkadefhs9AWVmSjsyXs7hrpGoz/HpNTw4qIh8oB1G3nXxZ4fnIY9pOzEcFIqKhmrPM6cTi73z8u4FBlpTiiOg==|920

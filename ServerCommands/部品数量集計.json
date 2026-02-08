@@ -45,8 +45,9 @@
           "Item2": 253
         }
       },
-      "SqlStatement": "DELETE FROM ymia_t_tanaoroshi_data\r\nWHERE TARGET_YEAR_MONTH = ?棚卸対象月",
-      "ID": "1b3a153a0e954c1db59aafd2608d3d27"
+      "SqlStatement": "DELETE FROM ymia_t_tanaoroshi_data",
+      "ID": "1b3a153a0e954c1db59aafd2608d3d27",
+      "Comments": "棚卸集計データの全体削除（delete ymia_t_tanaoroshi_data）"
     },
     {
       "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
@@ -60,8 +61,57 @@
           "Item2": 253
         }
       },
-      "SqlStatement": "INSERT INTO ymia_t_tanaoroshi_data\r\nSELECT \r\n    dt.TARGET_YEAR_MONTH,\r\n    mh.TANABAN,\r\n    dt.Z_FLAG,\r\n    '0',\r\n    dt.HINBAN,\r\n    0,\r\n    SUM(dt.TANA_SU)\r\nFROM \r\n    ymia_t_tanaoroshi_datainput dt\r\nLEFT JOIN (\r\n        SELECT \r\n            TANABAN, \r\n            HINBAN\r\n        FROM \r\n            mhinban\r\n        WHERE (HINBAN, KAITEI_SEQ_NBR) IN (\r\n                SELECT \r\n                    HINBAN, \r\n                    MAX(KAITEI_SEQ_NBR)\r\n                FROM \r\n                    mhinban\r\n                GROUP BY \r\n                    HINBAN\r\n            )\r\n    ) mh \r\n    ON dt.HINBAN = mh.HINBAN\r\n    where TARGET_YEAR_MONTH = ?棚卸対象月",
-      "ID": "590683339939428cb2ea2fc4e4434834"
+      "SqlStatement": "DELETE FROM ymia_t_tanaoroshi_datainput2ji",
+      "ID": "d9f35cc1ed43453b80cc1a8beb7378d1",
+      "Comments": "モバイル用棚卸集計データの削除（delete ymia_t_tanaoroshi_datainput2ji）"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸対象月"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "INSERT \r\nINTO remacsweb.ymia_t_tanaoroshi_data( \r\n    `TANAM_NBR`                                 -- レコードNo\r\n    , `TARGET_YEAR_MONTH`                       -- 対象年月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\n) \r\nSELECT\r\n      `TANAM_NBR` \r\n    ,  ?棚卸対象月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\nFROM\r\n    remacsweb.ttanam \r\n\r\n",
+      "ID": "a0a9f26190b249df95a7f9ce9c7bf725",
+      "Comments": "Remacs棚卸ファイル→集計用ファイルへの移動（ttanam → tanaoroshi_data）"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸月"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "INSERT INTO ymia_t_tanaoroshi_datainput2ji\r\nSELECT \r\n    dt.TARGET_YEAR_MONTH,\r\n    mh.TANABAN,\r\n    dt.Z_FLAG,\r\n    '0',\r\n    dt.HINBAN,\r\n    0,\r\n    SUM(dt.TANA_SU)\r\nFROM \r\n    ymia_t_tanaoroshi_datainput dt\r\nLEFT JOIN (\r\n        SELECT \r\n            TANABAN, \r\n            HINBAN\r\n        FROM \r\n            mhinban\r\n        WHERE (HINBAN, KAITEI_SEQ_NBR) IN (\r\n                SELECT \r\n                    HINBAN, \r\n                    MAX(KAITEI_SEQ_NBR)\r\n                FROM \r\n                    mhinban\r\n                GROUP BY \r\n                    HINBAN\r\n            )\r\n    ) mh \r\n    ON dt.HINBAN = mh.HINBAN\r\n    where TARGET_YEAR_MONTH = ?棚卸対象月",
+      "ID": "590683339939428cb2ea2fc4e4434834",
+      "Comments": "モバイルで入力した情報を一つの棚番にいれて設定する（datainput → datainput2ji）"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {},
+      "SqlStatement": "UPDATE ymia_t_tanaoroshi_data AS a\r\nJOIN (\r\n    SELECT \r\n        target_year_month, tanaban, z_flag, azukarikubun, hinban, \r\n        ROW_NUMBER() OVER(PARTITION BY hinban ORDER BY (SELECT NULL)) as rn\r\n    FROM ymia_t_tanaoroshi_data\r\n) AS target ON \r\n    a.hinban = target.hinban AND \r\n    a.target_year_month = target.target_year_month AND\r\n    a.tanaban = target.tanaban AND\r\n    a.z_flag = target.z_flag AND\r\n    a.azukarikubun = target.azukarikubun\r\nJOIN ymia_t_tanaoroshi_datainput2ji AS b ON a.hinban = b.hinban\r\nSET a.tana_su = b.tana_su\r\nWHERE target.rn = 1",
+      "ID": "5c2ed8e814724d7b8a45de7dbdbd4fe6",
+      "Comments": "集約した一つの棚番の在庫数のみを更新する（Geimini/SQL　datainput2ji →(update)→data）"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {},
+      "SqlStatement": "INSERT INTO ymia_t_tanaoroshi_data (\r\n    target_year_month, tanaban, z_flag, azukarikubun, hinban, zaiko_su, tana_su\r\n)\r\nSELECT \r\n    b.target_year_month, b.tanaban, b.z_flag, b.azukarikubun, b.hinban, b.zaiko_su, b.tana_su\r\nFROM ymia_t_tanaoroshi_datainput2ji AS b\r\nWHERE NOT EXISTS (\r\n    SELECT 1 \r\n    FROM ymia_t_tanaoroshi_data AS a \r\n    WHERE a.hinban = b.hinban\r\n)",
+      "ID": "83d961ad9d0441ed828fb4d6bdb7bcbd",
+      "Comments": "モバイル集計データにあって棚卸理論在庫にない情報をinsertする（datainput2ji→(insert)→data）"
     }
   ]
 }
