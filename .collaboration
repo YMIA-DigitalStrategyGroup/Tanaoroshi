@@ -177,7 +177,17 @@
   },
   {
     "ModuleName": "MasterPCPage/棚卸入力",
-    "ModuleType": 3
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-02-09T07:39:36.7978897+09:00",
+    "ModuleType": 3,
+    "ToRemoveFiles": [
+      "MasterPages\\棚卸入力.json",
+      "MasterPages\\棚卸入力.rd"
+    ]
   },
   {
     "ModuleName": "ServerCommand/棚卸開始",
