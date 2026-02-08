@@ -195,7 +195,16 @@
   },
   {
     "ModuleName": "ServerCommand/部品数量集計",
-    "ModuleType": 15
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-02-09T07:40:33.6657285+09:00",
+    "ModuleType": 15,
+    "ToRemoveFiles": [
+      "ServerCommands\\部品数量集計.json"
+    ]
   },
   {
     "ModuleName": "ApplicationSetting",
