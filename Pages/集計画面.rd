@@ -3,7 +3,7 @@
   "ColumnCount": 60,
   "RowCount": 45,
   "Formulas": {
-    "8,35": "V9/Q9*100",
+    "8,35": "IF(Q9<>0,V9/Q9*100,0)",
     "8,26": "Q9-V9",
     "8,31": "IF(ISERROR(AJ9),\"-\",AJ9)"
   }

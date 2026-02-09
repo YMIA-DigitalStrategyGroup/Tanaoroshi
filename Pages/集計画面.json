@@ -9,11 +9,6 @@
   },
   "Cols": {
     "InLogicalVisibleIndexes": [
-      35,
-      36,
-      37,
-      38,
-      39,
       40,
       41,
       42,
@@ -48,12 +43,13 @@
     "7,21": "棚卸数",
     "7,26": "差異",
     "7,31": "誤差率",
+    "7,35": "%",
     "36,2": "集計",
     "36,10": "スマホデータ確認",
     "36,27": "Excel出力"
   },
   "Formulas": {
-    "8,35": "V9/Q9*100",
+    "8,35": "IF(Q9<>0,V9/Q9*100,0)",
     "8,26": "Q9-V9",
     "8,31": "IF(ISERROR(AJ9),\"-\",AJ9)"
   },
@@ -119,7 +115,8 @@
                   }
                 },
                 {
-                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                  "CompareType": 6,
                   "ColumnBindingInfo": {
                     "TableName": "ymia_t_tanaoroshi_data",
                     "ColumnName": "TANABAN",
@@ -131,7 +128,8 @@
                   }
                 },
                 {
-                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                  "CompareType": 6,
                   "ColumnBindingInfo": {
                     "TableName": "ymia_t_tanaoroshi_data",
                     "ColumnName": "HINBAN",
@@ -142,10 +140,9 @@
                     "SerializeProperty": "=集計画面!E6"
                   }
                 }
-              ],
-              "RelationType": 1
+              ]
             },
-            "ID": "df3b364aa1304995be5037aa56865e91"
+            "ID": "75db57eea3cc4fb384090afc1c2de4cd"
           }
         ],
         "Text": "検索",
@@ -165,20 +162,13 @@
     },
     "5,13": {
       "CellType": {
-        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
-        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
-        "IsBounding": true,
-        "DataSource": "ymia_t_tanaoroshi_datainput2ji",
-        "ValueColumnBindingInfo": {
-          "TableName": "ymia_t_tanaoroshi_datainput2ji",
-          "ColumnName": "TANABAN",
-          "GUID": "39fc2495-f636-49f0-ba3a-47ffad3c82a0"
-        },
-        "DisplayColumnBindingInfo": {
-          "TableName": "ymia_t_tanaoroshi_datainput2ji",
-          "ColumnName": "TANABAN",
-          "GUID": "0ee3d28a-8adb-4b7e-b167-5dc8b1efbddd"
-        }
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
       }
     },
     "7,2": {
@@ -265,7 +255,7 @@
                     "CheckDataValidation": true
                   }
                 ],
-                "ID": "dcd32d3c-e77f-4c52-ab0a-544735f4d70c"
+                "ID": "401ef7a4-ab93-4490-9ebe-5d1416d17b83"
               }
             ]
           }
@@ -314,7 +304,7 @@
                     "IsOnlyExportValue": false
                   }
                 ],
-                "ID": "b2e903e9-6c43-4c42-9259-e86cc4f49ac6"
+                "ID": "e54e7646-9adc-4d39-85f3-e58d54864280"
               }
             ]
           }
@@ -391,10 +381,13 @@
         "BorderRight": 0
       },
       {
-        "FontFamily": 1,
+        "BorderBottom": 0,
+        "BorderTop": 0
+      },
+      {
         "BorderBottom": 0,
         "BorderTop": 0,
-        "BorderLeft": 0
+        "BorderRight": 0
       },
       {
         "BorderBottom": 0,
@@ -427,8 +420,16 @@
         "BorderLeft": 0
       },
       {
+        "HorizontalAlignment": 5,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
         "FontFamily": 1,
-        "Formatter": 5,
+        "Formatter": 6,
+        "HorizontalAlignment": 5,
         "BorderBottom": 0,
         "BorderRight": 0
       }
@@ -440,7 +441,8 @@
         "black",
         "@",
         "#,##0_ ;[Red]-#,##0",
-        "0%"
+        "Right",
+        "0.0%"
       ],
       "Borders": [
         {
@@ -526,14 +528,14 @@
       "5,10": 10,
       "5,11": 10,
       "5,12": 11,
-      "5,13": 12,
-      "5,14": 10,
-      "5,15": 10,
-      "5,16": 10,
-      "5,17": 10,
-      "5,18": 10,
-      "5,19": 10,
-      "5,20": 11,
+      "5,13": 9,
+      "5,14": 12,
+      "5,15": 12,
+      "5,16": 12,
+      "5,17": 12,
+      "5,18": 12,
+      "5,19": 12,
+      "5,20": 13,
       "7,2": 1,
       "7,3": 1,
       "7,4": 1,
@@ -558,51 +560,51 @@
       "7,23": 1,
       "7,24": 1,
       "7,25": 1,
-      "7,26": 13,
-      "7,27": 13,
-      "7,28": 13,
-      "7,29": 13,
-      "7,30": 13,
+      "7,26": 14,
+      "7,27": 14,
+      "7,28": 14,
+      "7,29": 14,
+      "7,30": 14,
       "7,31": 2,
-      "7,32": 14,
-      "7,33": 14,
-      "7,34": 14,
-      "8,2": 15,
-      "8,3": 15,
-      "8,4": 15,
-      "8,5": 15,
-      "8,6": 15,
-      "8,7": 15,
-      "8,8": 15,
-      "8,9": 15,
-      "8,10": 15,
-      "8,11": 15,
-      "8,12": 15,
-      "8,13": 15,
-      "8,14": 15,
-      "8,15": 15,
-      "8,16": 15,
-      "8,17": 15,
-      "8,18": 15,
-      "8,19": 15,
-      "8,20": 15,
-      "8,21": 15,
-      "8,22": 15,
-      "8,23": 15,
-      "8,24": 15,
-      "8,25": 15,
-      "8,26": 16,
-      "8,27": 17,
-      "8,28": 17,
-      "8,29": 17,
-      "8,30": 18,
-      "8,31": 13,
-      "8,32": 13,
-      "8,33": 13,
-      "8,34": 13,
-      "8,35": 19,
-      "8,36": 15,
-      "8,37": 15,
+      "7,32": 15,
+      "7,33": 15,
+      "7,34": 15,
+      "8,2": 16,
+      "8,3": 16,
+      "8,4": 16,
+      "8,5": 16,
+      "8,6": 16,
+      "8,7": 16,
+      "8,8": 16,
+      "8,9": 16,
+      "8,10": 16,
+      "8,11": 16,
+      "8,12": 16,
+      "8,13": 16,
+      "8,14": 16,
+      "8,15": 16,
+      "8,16": 16,
+      "8,17": 16,
+      "8,18": 16,
+      "8,19": 16,
+      "8,20": 16,
+      "8,21": 16,
+      "8,22": 16,
+      "8,23": 16,
+      "8,24": 16,
+      "8,25": 16,
+      "8,26": 17,
+      "8,27": 18,
+      "8,28": 18,
+      "8,29": 18,
+      "8,30": 19,
+      "8,31": 20,
+      "8,32": 14,
+      "8,33": 14,
+      "8,34": 14,
+      "8,35": 21,
+      "8,36": 16,
+      "8,37": 16,
       "8,38": 5,
       "9,2": 8,
       "9,3": 8,
@@ -1471,7 +1473,6 @@
     "4,4,1,9",
     "4,13,1,8",
     "5,4,1,9",
-    "5,13,1,8",
     "1,4,2,9",
     "1,13,2,8",
     "4,22,2,4",
@@ -1488,7 +1489,8 @@
     "7,21,1,5",
     "7,26,1,5",
     "7,31,1,4",
-    "7,35,1,4"
+    "7,35,1,4",
+    "5,13,1,8"
   ],
   "PageInfo": {
     "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
@@ -1514,4 +1516,4 @@
     "PaperSize": {},
     "Margin": {}
   }
-}//o5NmcODN7lmAB1zvoiF34knuUwA+dHZ837zZCRLBtaTqnONA3YDohexRsoA5vKXTcSSx7JSrHADEO8rl8sla8XJ3Z/SdPX67zv2OzPblgBuIFVqRK5kc3cebuTfzDQT6TRh5pmGJNloKvKGTWzUOFjGHAfQ9rX8sBwx1UFpwrU8OwHdjsBeRjGsz1a4ICiUvKSGQu4SIg+nXiJKU53nTD8lSdRcXHjGtYOEbExpB3lPxX6KX+EA4FgIBg6yIZGau9Q8OARU2aB8HlfbsOUvIc+cIMtjOsZjHGb/9RqlqqjSfd8l9bQaCS+GOB2Wf9JU83jz93bfEVSQKeDrcR7vA+J4RUS1/xBVaNnfC7QjRCzEMwhF2SUkQ3EfLkcF+zP59VN4WTddQWB9r1ksNeLNechHNMxcYX4O06yymTYAj1xC+AX/aP2irvrYBwuKRiTl/ARFR6L35CdC/NYVawXMqsnoTGqdJoiPtsNuc4gJlabybVktoZ+bE3KYDtZZbv5RSqMi9ycazq9ohkB6DPb3s90c1HQDjsD+NLio43kLzMFjPxea3TbnW+iT+cUEmlFEOXVZOWcWF7DT0xcGZVObjTRaB3ulvoCLDm0jlsscLOYx8pYiroWZOwRkTriQ+YWIobVFT+V7rzqlIkHosIpG/5upDoF2IkWOTdgffVWHpZ4vEeaOgpCEFTTuEn9JO45IkD0ZlnwqBRkvLdWPX8KysI15D/pMPyYYqJAW2xzIdcoXV+uWFeAyKW/lm+JK/YcY2y4puWfbCv3MHDAu9HjfMlfkg9lKw2TNiCbfMw3HC7xqtQv+9UIO352lcjUAUYn2LBmLnsJrtRWgWzC6ORzPMNRkuzu7flUNI5cx0jsfxb0ZID2/v0miKfQ7ECvUx4Nzm/NtiaijA6eV5q/Xz6xIC6Q==|920
+}//oe3b2tZ1BZfZWYeUeTcXWrBh04sDPtfiAIYnsrRup6g7BxUXarmJ24dkesgdXvErvDJOxLUhSxB/hzNlIjns4n+NrMxjq+SWFCg5w2rFf7Jfld9dxPpggQ85q3+x3TLmGDB94sA0g2ZcHMnfaVl74WhaD/RcB1eATQAgrwFMgUnur/tVQswOo7TkIL+N5Vq4V7vjj3xdpi8MQdVFcimBWtC5BsyGLDdELcByjFgp1FsC4e6t8Hd5Ws768b5WuXSJr+lTmsOzh6mv2zVl+EKRbcMtCln9fSMFZecP4RjGN9AWPe0ZdlqLYoRBnoBN8eNQhoGzkcKhX9kZMYt9anH81Aqu2ZUtVcxSjuf58TjHfaSSajGb69IGvWvGWsVooia2cYzeu2J2aU3y0NnPCcI61Wf08zKXCAVQlk/Bl12NRbf5eXjrWqWmgIM6u27oVsfqzmJykHpI5K4C0mcsr7QjLTpdW6rufEGPao6f2XUW8w69jheuKMWdD7OYbjkeXL1RX8sNVYFznB7CtQG519Qi4bTHcCUZtFjExiNXae48Z+r1tmmhSmF0HcW5i8Iz77kn6PXvm9ZNd5/SSMrDdVutEnc9Bml2wamURY18dNjCccWk1vesWjZGrBDpsDW8jcqGztNIZ2iz+MxDpK2YRr+N3hsyiVOPrhFZJzJ/IIhTigPT+tkI1RHPLUHsNyOL78rniDLB/4kJqgO/SdJANAsAMKwKyt1B7fJJDZdQG/HCGEFHqcx9Qm5vOCSDuryABbCX4mmRppyGhejHTe+SK0Nqv0nEPgOY9hd8G5sCCCzXTedJ6QMQJU6UhjZX6BV0uxr4Cq3BchOI9vE56QELHS9puo9zsWPoE9MMU5JdnqXXNGJKqrgwoRYFX6VeqpjbWgtSLkS8w3oTISWSBJUf++Km7w==|920
