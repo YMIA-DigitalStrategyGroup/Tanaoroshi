@@ -23,9 +23,13 @@
       "Parameters": [
         {
           "Name": "棚卸対象月",
-          "DataValidationInfo": {}
+          "DataValidationInfo": {},
+          "TestData": "202603"
         }
-      ]
+      ],
+      "InvokeTriggerTestData": {
+        "UserName": "Administrator"
+      }
     }
   ],
   "Commands": [
@@ -56,7 +60,7 @@
           "Item2": 253
         }
       },
-      "SqlStatement": "INSERT \r\nINTO remacsweb.ymia_t_tanaoroshi_data( \r\n    `TANAM_NBR`                                 -- レコードNo\r\n    , `TARGET_YEAR_MONTH`                       -- 対象年月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\n) \r\nSELECT\r\n      `TANAM_NBR` \r\n    ,  ?棚卸対象月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\nFROM\r\n    remacsweb.ttanam \r\n\r\n",
+      "SqlStatement": "INSERT \r\nINTO ymia_t_tanaoroshi_data( \r\n    `TANAM_NBR`                                 -- レコードNo\r\n    , `TARGET_YEAR_MONTH`                       -- 対象年月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\n) \r\nSELECT\r\n      `TANAM_NBR` \r\n    ,  ?棚卸対象月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    ,  0                                 -- 棚卸数\r\nFROM\r\n    ttanam \r\n\r\n",
       "ID": "a9bfe3632ea84c67aa24491621a6f47c"
     }
   ]

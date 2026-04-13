@@ -5,16 +5,7 @@
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_data",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T08:26:42.3150189+09:00",
-    "ModuleType": 7,
-    "ToRemoveFiles": [
-      "Tables\\ymia_t_tanaoroshi_data.json"
-    ]
+    "ModuleType": 7
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_file",
@@ -22,16 +13,7 @@
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_datainput",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T08:20:27.1504886+09:00",
-    "ModuleType": 7,
-    "ToRemoveFiles": [
-      "Tables\\ymia_t_tanaoroshi_datainput.json"
-    ]
+    "ModuleType": 7
   },
   {
     "ModuleName": "Table/mhinban",
@@ -155,17 +137,7 @@
   },
   {
     "ModuleName": "PCPage/棚卸開始登録",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T08:22:21.1457912+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\棚卸_\\棚卸開始登録.json",
-      "Pages\\棚卸_\\棚卸開始登録.rd"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "PCPage/棚卸入力画面",
@@ -173,31 +145,11 @@
   },
   {
     "ModuleName": "PCPage/集計画面",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T08:30:19.7292684+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\集計画面.json",
-      "Pages\\集計画面.rd"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "PCPage/スマホデータ確認",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T09:29:26.3773661+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\スマホデータ確認.json",
-      "Pages\\スマホデータ確認.rd"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "MasterPCPage/FGC_ユーザーマスターページ",
@@ -205,30 +157,11 @@
   },
   {
     "ModuleName": "MasterPCPage/棚卸入力",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T08:21:50.083086+09:00",
-    "ModuleType": 3,
-    "ToRemoveFiles": [
-      "MasterPages\\棚卸入力.json",
-      "MasterPages\\棚卸入力.rd"
-    ]
+    "ModuleType": 3
   },
   {
     "ModuleName": "ServerCommand/棚卸開始",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T08:11:34.5523721+09:00",
-    "ModuleType": 15,
-    "ToRemoveFiles": [
-      "ServerCommands\\棚卸開始.json"
-    ]
+    "ModuleType": 15
   },
   {
     "ModuleName": "ServerCommand/部品数量集計",
@@ -284,16 +217,7 @@
   },
   {
     "ModuleName": "DataContectionSet",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T08:07:39.3261302+09:00",
-    "ModuleType": 25,
-    "ToRemoveFiles": [
-      "DataConnectionSet.json"
-    ]
+    "ModuleType": 25
   },
   {
     "ModuleName": "Upload",
@@ -301,16 +225,7 @@
   },
   {
     "ModuleName": "PublishConfiguration",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T09:26:06.3448467+09:00",
-    "ModuleType": 39,
-    "ToRemoveFiles": [
-      "PublishSettingsConfig.json"
-    ]
+    "ModuleType": 39
   },
   {
     "ModuleName": "Plugin",
@@ -326,12 +241,6 @@
   },
   {
     "ModuleName": "TableView/ymia_v_mhinban_lastest",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-04-13T08:29:39.2032931+09:00",
     "ModuleType": 23
   }
 ]

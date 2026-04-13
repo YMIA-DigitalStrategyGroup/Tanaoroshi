@@ -1,10 +1,10 @@
 {
   "PageType": 0,
-  "ColumnCount": 60,
+  "ColumnCount": 63,
   "RowCount": 45,
   "Formulas": {
-    "8,35": "IF(Q9<>0,V9/Q9*100,0)",
-    "8,26": "Q9-V9",
-    "8,31": "IF(ISERROR(AJ9),\"-\",AJ9)"
+    "8,47": "IF(ISERROR(AZ9),\"-\",AZ9)",
+    "8,51": "IF(AG9<>0,AL9/AG9*100,0)",
+    "8,42": "AG9-AL9"
   }
 }

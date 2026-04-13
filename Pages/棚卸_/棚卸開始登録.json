@@ -37,6 +37,7 @@
     "3,8": {
       "CellType": {
         "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
+        "SelectOnly": false,
         "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
         "IsBounding": true,
         "DataSource": "tkansayo_tanaoroshi",
@@ -87,7 +88,14 @@
                 }
               }
             },
-            "ID": "6a0b2aefa46a416599696eba544d92cd"
+            "ID": "cf361bad08114a4f9f225e9ddc87380b"
+          },
+          {
+            "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
+            "MessageFormula": {
+              "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+              "SerializeProperty": "=棚卸開始登録!レコード件数"
+            }
           },
           {
             "$type": "Forguncy.Model.ConditionCommand, ServerDesignerCommon",
@@ -119,7 +127,7 @@
                           "ConfirmIcon": 1
                         },
                         "CommandList": [],
-                        "ID": "2607a62a-6ade-4b05-9ce8-f2782cef7476"
+                        "ID": "9217516a-1e8e-4e29-8912-261a729134f5"
                       },
                       {
                         "CommandList": [
@@ -127,12 +135,12 @@
                             "$type": "Forguncy.Model.StopCommand, ServerDesignerCommon"
                           }
                         ],
-                        "ID": "206b0ec5-b80b-4407-abe5-3e53c01c35db"
+                        "ID": "ff6f1ec8-c7e9-4d50-8f89-4f35e1007f49"
                       }
                     ]
                   }
                 ],
-                "ID": "7344ed40-7692-4f03-9d15-1919e3e87736"
+                "ID": "5cfd3e45-91fa-4547-a31f-4bfb93ed651d"
               }
             ]
           },
@@ -169,7 +177,7 @@
                     "MessageFormula": "棚卸情報を読み込み、棚卸を開始します！！"
                   }
                 ],
-                "ID": "447ea397-6113-450c-b512-f22892c8d56c"
+                "ID": "72b2c6f6-5bbb-49e0-8417-983d9fb4996f"
               }
             ]
           }
@@ -465,4 +473,4 @@
     "PaperSize": {},
     "Margin": {}
   }
-}//odHWiKTDHrddRcyXK1mk/eA2vcCG3h7s34MIjdfgjViz1lQ5j4A3BXEqqkcUUj/ItYSttgtUxo2i5xVEISIFkNDXvsVio/h9EzHO00KlIHRqxL9vkK/MTk9hkNozsxCu4/g48JCWex2uiKdv1rh8m3tugrltCONNQfaYGpjTUKVM8uWxx6UH7cBV4lUkcqCsheu0UY/wbO2CNRmIpWlbAqBwdhn4Gur7Gj4f4dwOiIOTDYdsImm8DUhMWBc3VG2EL7rL3yrWL4/OQD4UV32D/dnC/2jJpS24J5QKHcDvt5hYq6GD6pJxHnLJ2A+yHBqH5hv562J5+e94AJc3f6cn1SVwvLeoeidw8cQCk5uEe7oXS9o1W69C196SMUoQVxeYyqE1bJEoMHBk2xvESwCWDGmy+/UC0aPKx6TzZ9DrE/hnYvTquZ/rSuAZ6CfT+wTsK4d9b0SJ/NNOHZdKuqXWOpHXZ8Y++2vuzQQY9Rxc1Hsn+wYFovI0C33QJM0HS5MqSAsajjvVpjuncJntcj2oX9rIos3c2wnk6tCosD2WnPIcVry35Npcdcud6qlxKZRkmBMx8hdXhQc3csZXxkRSMrhgbhLh7ti1u/GExm1yVU3+Os4MxjiPwkRpBebRpbtLUSwM3AOSGB+Yb9JJxgdJSa5IVUaW1Awls0AU7Bherz0EqhgpvHSQ394qxSLfM5qUaf6ULOxkaGb72Eoa4xgDWODtszNXekkiOHFCCsvZ1HQ6bZ6rmQ8GL4T1wExeIO/WtJRx6vvJywTldUeGiaYVcT3HRuCUIKWDCPpx3KBKB0SCF3eQ8JnJmPRHA9x0v30DgirGpY+++VddBa69RJOjNJVbgDYOCbbHNapDG0ehXhimS6c1k1cfkz/cEbJ9M1fhz9buKpf3PBfmrNgc6R4q9w==|920
+}//JRWRR76aPhQayRssHwGBaHuWqIsO2Uh767JxdBj7jND+GBzyR6rMEgCL50vPbM9TIhfSLRk8d851pfO4sVLNZXfTvJf/bWyZYVdCzHlO8U6E4oWDWBMnhlhdEYg3PuVXudVc22sml812jSGJ5zMUcfeb4TlZyKqvNKxWoopeNJNHtE4vX5Ft3XMTraMjxoFLOL66dr9cHAqk6VHS/PLe5M6TEN/ywylmKDFAIF6sYW2cMDFTfGy4y7lV5uWPZ2WU4Rt7zU7cRGAe4qcienYTRa6ivJbasY+9Gc0as+7hxHR77o7GxHxFVNwEs5uAbpSSqlCI0LLyVYtQ/rIPv5RYtzfWHzdukLAxwggibPEJ5YLZbe3Ro4VeDbFieRnCML+6A21fiNr6VVyyiRQlYDdgWV/95aYShabPmM5bVMy4GhxFlZcnnPpG4JR4ssUqydky4FzumCPriyCh76buMlGeYXvDxhPQyFi2ETZuqdt/L82spBF6mLx4xol1DcHo7K/5L8rGtx6avUnwyNAnjji9i0XnQ5UQ7SVIkj7GY9Sy5Vfc72FUub2nJUITj6GAxoGuolljkJSmsMVlcAkJMd9KS+JDibZNyXfV1AeDqc14kQ0HGJGLu5ZzDFs5oDoJu2ZIZ2RrujdlbWDlVRCUYI5vtPIFXAUUa/qNEFE624/87sJS/FyII2FkykNKbYV5MJZkBWmm4MAeCxhRVMdm25ZBApDOEZkKeYTcB0r8mGCJep4c18WhsK0AC2c3MDuWjlhd38ZEg+zYb3Z/Pl09NT38BJnhq7yeZRZ7+j3zn6CDx7vy94D51J+LpwziUvTtIOBeM2S5vqURJtycKgNUvR/9TTPNQ5I//UB9Ev3miZgm2hFtUNSc4i6+ra2s0bAWiAHz8lXt9Xq9S76qVzUBIuKhXg==|920

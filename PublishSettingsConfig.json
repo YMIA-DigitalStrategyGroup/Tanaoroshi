@@ -1,13 +1,13 @@
 [
   {
     "Name": "サーバーへ発行1",
-    "ApplicationUrl": "http://YMIADIGITALSV01/棚卸入力管理",
+    "ApplicationUrl": "http://YMIADIGITALSV01/TanaoroshiMng",
     "PublishSettings": {
       "IsPrivateServer": true,
       "ServerName": "YMIADIGITALSV01",
       "UserName": "AA121806",
       "SitePort": 80,
-      "AppName": "棚卸入力管理",
+      "AppName": "TanaoroshiMng",
       "AppStartPage": "",
       "TakeServeronline": true,
       "PublishRolesToServer": true

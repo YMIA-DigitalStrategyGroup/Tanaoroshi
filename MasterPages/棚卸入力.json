@@ -27,6 +27,23 @@
             "CanVisitRoleList": [
               "FGC_Anonymous"
             ]
+          },
+          {
+            "Value": "棚卸開始",
+            "Text": "棚卸開始",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+                "PageName": "棚卸開始登録"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
           }
         ],
         "Orientation": 0,
@@ -106,4 +123,4 @@
       "Size": "1280,0"
     }
   ]
-}//jNelOuY0GA7BfPE0kShWMSwOtcrIvqwvOTJBXKuPiXGqOLh+wTxm/KWe1hxncKF2Sk2EHvQ/gsVlRW2mNuP+ORs8AGkFooLJau6ridVGwALEhu32o/e+x1wR6Bu0xYDEU1mND0eTF8dBeJD58kzaHK8y8JI/bweQJUYli+38sWKe3HqensMhXUMz1i4suvbkT83WI/cmgmnLCBNmu5B4wYo/hxhPCtCOoUxgyzM0dJxJ7q6dCyHD6y/rF1R/kNwOwJJEfE6H+8tpiG2884IxynSbJacUSC1LLFd/ElCnbv2tB/nneNXEAkt/pdNAXnNZooTC70hmWgjlC5gfjmevPuGwNN48VqvhSqWwhl7laHe3DfMnnm2+WK3O84s/+eRVaIVNIKysSDjKglphet1dgbyAS+79KhvnOhkcyRfsMahcXjYfl9jNQljQzRcHRTXEuAXnMPxvGkHFiaksWu+WxSHTdp/5UNW+Nl0qMH9/3SEgg3/Mjw3dkyZQaiFoiemdqg5vP89tcJcPZMO+cdi1RWaCXs7QtvHAy9eWn096ynfC4zgYAbWxrUP4Fk+M/UnlPQ0zPH9eYbIPZRwXeH4eGQ41D32TEz7e/vNOJ4+26x4cyAAaS8H5g0dIhnXS82+fYHj1mcPmSMQ0OwVQq/Csi+9mv00ClQRIAb7Ow0TRYY5NemY1BjX6g14rXCpNMEw3opG8wAjt7C6e5Q/gcaPsG308wGIK8omVDNtv/mPMD5UAHH3gQwGxZoLzxKLu2g+sQuAIjxhg8Pbrl5qAZgYfmUZ9QqcqTcEvFKh+pI0WSAvRfh+IbdE5sbmoeq7qOHzeIKrakjr9FDX3EMerWh3BjgfCUgXVTas7yGFO2tW79tqOWjJJd7ImAPidXzDtaVu1oEoHjpUm6V0knSDew2bnBg==|920
+}//7sfJu/P6mZCAlZFHlgQqyc0ByBfFr7HUbz6l5t95VrtWwgkx9WxEKGEBdQ73fU/hGdfyA4hMB39eX4m4V0H8Nx0+KbdH3Iq+u2qCSveY+fSSA8g0f2CwjXhbUAdFIEjLNEbC5c/KRJAt5xwjN2VJ4SBMnLlSMZxc4T2qSfoI0lvOXZk/kps36x9bMFt4VqJ2MTXrleBygrmpEJy/SA2/qQE4s1kZWYcZWdtXS7Qp/8ybSzAQBzwAGb9MgdvDw3BMDffXGl87JJlOLMXgdmsGib4wh3RHgXaHHCMrYBjqV1W5lKg8obOc/noqxag6/cnhEtpx5jkd7LKCXgJ2umCSLQ68NTJzM9oOgMJco64DBUx/Wi0InUQTph/Ui7xHHUCHcc4Ot5PaZE883tRSOSyBTRs0QnmvKjpupdAhxoPGMMO1IW6qEYr5Ivoh0LkLm7M/OQzIz1cs3HTGbup2XWHLEM6kh17kS/IJLD6XQBe93iKnI48OOCKccCN4HTEMyoPGyF2ipW98Io6TbGod6b0Ww23FKe+eLATSfkqKVza3dpbCvH7v9yVH28X2CdKV4SLIZlDoN7K984kIKV6vtLEZKF443DtTUp0abPvCrbC1+tQWc6BcHWZOXXCIQbi7TDnaKYmapVCNp12tGGNsIb6xQAC2o0jVUruPHgSOgCHCvFeDhMbDmkIVwG1+7r7PcpsssBYcC4BuDOvwa50NnHYkd0voI8Kg1m8eYop+ukaGe/C2MURyh9kdpWPOXpLci332aLp3W94BgCbEnVzJQWqQ3IkOOvJXkkWjz/5z76as5e+LV9LnK1x8ATfNDqYd0/4pG+j/Hba63SJzlNAbEpGa12xz+MpReev971h75VNWTt55bUzzoP/2s/IQkUulGn30/iw7beWoLsrHOHcXVOiW7Q==|920
