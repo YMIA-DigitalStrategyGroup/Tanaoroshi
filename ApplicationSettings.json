@@ -7,7 +7,7 @@
   "GlobalProperties": [],
   "WebSitePort": 35705,
   "UserServicePort": 54495,
-  "StartPage": "集計画面",
+  "StartPage": "棚卸入力画面",
   "StartDateFiscalYear": 4,
   "BaseOnStartingMonth": true,
   "MultipleLanguageSettings": {
