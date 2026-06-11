@@ -69,15 +69,15 @@
       "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
       "ConnStrId": "MySql1",
       "Params": {
-        "棚卸対象月": {
+        "棚卸月": {
           "Item1": {
             "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
-            "SerializeProperty": "=棚卸対象月"
+            "SerializeProperty": "=棚卸月"
           },
           "Item2": 253
         }
       },
-      "SqlStatement": "INSERT \r\nINTO remacsweb.ymia_t_tanaoroshi_data( \r\n    `TANAM_NBR`                                 -- レコードNo\r\n    , `TARGET_YEAR_MONTH`                       -- 対象年月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\n) \r\nSELECT\r\n      `TANAM_NBR` \r\n    ,  ?棚卸対象月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\nFROM\r\n    remacsweb.ttanam \r\n\r\n",
+      "SqlStatement": "INSERT \r\nINTO ymia_t_tanaoroshi_data( \r\n    `TANAM_NBR`                                 -- レコードNo\r\n    , `TARGET_YEAR_MONTH`                       -- 対象年月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\n) \r\nSELECT\r\n      `TANAM_NBR` \r\n    ,  ?棚卸月\r\n    , `TANABAN`                                 -- 棚番\r\n    , `Z_FLAG`                                  -- Z分類\r\n    , `AZUKARIKUBUN`                            -- 預り区分\r\n    , `HINBAN`                                  -- 品番\r\n    , `ZAIKO_SU`                                -- 在庫数\r\n    , `TANA_SU`                                 -- 棚卸数\r\nFROM\r\n    ttanam \r\n\r\n",
       "ID": "a0a9f26190b249df95a7f9ce9c7bf725",
       "Comments": "Remacs棚卸ファイル→集計用ファイルへの移動（ttanam → tanaoroshi_data）"
     },
@@ -93,7 +93,7 @@
           "Item2": 253
         }
       },
-      "SqlStatement": "INSERT INTO ymia_t_tanaoroshi_datainput2ji\r\nSELECT \r\n    dt.TARGET_YEAR_MONTH,\r\n    mh.TANABAN,\r\n    dt.Z_FLAG,\r\n    '0',\r\n    dt.HINBAN,\r\n    0,\r\n    SUM(dt.TANA_SU)\r\nFROM \r\n    ymia_t_tanaoroshi_datainput dt\r\nLEFT JOIN (\r\n        SELECT \r\n            TANABAN, \r\n            HINBAN\r\n        FROM \r\n            mhinban\r\n        WHERE (HINBAN, KAITEI_SEQ_NBR) IN (\r\n                SELECT \r\n                    HINBAN, \r\n                    MAX(KAITEI_SEQ_NBR)\r\n                FROM \r\n                    mhinban\r\n                GROUP BY \r\n                    HINBAN\r\n            )\r\n    ) mh \r\n    ON dt.HINBAN = mh.HINBAN\r\n    where TARGET_YEAR_MONTH = ?棚卸対象月",
+      "SqlStatement": "INSERT INTO ymia_t_tanaoroshi_datainput2ji\r\nSELECT \r\n    dt.TARGET_YEAR_MONTH,\r\n    mh.TANABAN,\r\n    dt.Z_FLAG,\r\n    '0',\r\n    dt.HINBAN,\r\n    0,\r\n    SUM(dt.TANA_SU)\r\nFROM \r\n    ymia_t_tanaoroshi_datainput dt\r\nLEFT JOIN (\r\n        SELECT \r\n            TANABAN, \r\n            HINBAN\r\n        FROM \r\n            mhinban\r\n        WHERE (HINBAN, KAITEI_SEQ_NBR) IN (\r\n                SELECT \r\n                    HINBAN, \r\n                    MAX(KAITEI_SEQ_NBR)\r\n                FROM \r\n                    mhinban\r\n                GROUP BY \r\n                    HINBAN\r\n            )\r\n    ) mh \r\n    ON dt.HINBAN = mh.HINBAN\r\n    where TARGET_YEAR_MONTH = ?棚卸対象月\r\n    group by dt.HINBAN, mh.TANABAN",
       "ID": "590683339939428cb2ea2fc4e4434834",
       "Comments": "モバイルで入力した情報を一つの棚番にいれて設定する（datainput → datainput2ji）"
     },
