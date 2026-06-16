@@ -181,7 +181,17 @@
   },
   {
     "ModuleName": "PCPage/棚卸入力画面",
-    "ModuleType": 1
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-06-16T12:09:18.8480833+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\棚卸_\\棚卸入力画面.json",
+      "Pages\\棚卸_\\棚卸入力画面.rd"
+    ]
   },
   {
     "ModuleName": "PCPage/仕様書",
