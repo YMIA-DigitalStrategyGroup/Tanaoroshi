@@ -30,6 +30,7 @@
   "Values": {
     "0,2": "本日日付",
     "0,21": "ファイル名",
+    "0,39": "数量集計",
     "4,2": "棚卸対象月",
     "7,2": "品番",
     "7,11": "棚番",
@@ -47,8 +48,7 @@
     "10,59": "棚数",
     "10,63": "棚卸年月",
     "38,2": "更新",
-    "38,9": "Excel出力",
-    "38,16": "数量集計"
+    "38,9": "Excel出力"
   },
   "Formulas": {
     "0,7": "TODAY()",
@@ -68,6 +68,30 @@
           }
         ],
         "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
+      }
+    },
+    "0,39": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+            "PageName": "集計画面",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=棚卸入力画面!L5"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=集計画面!N2"
+                }
+              }
+            ]
+          }
+        ],
+        "Text": "数量集計",
+        "TemplateKey": "_RS_Normal_Style2"
       }
     },
     "4,11": {
@@ -102,7 +126,26 @@
               "Order": 1
             }
           ]
-        }
+        },
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.QueryCommand, ServerDesignerCommon",
+            "TargetTableName": "ymia_t_tanaoroshi_data",
+            "SqlCondition": {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "ymia_t_tanaoroshi_data",
+                "ColumnName": "TARGET_YEAR_MONTH",
+                "GUID": "2876ce2b-29bb-4702-902b-68bed5c83ff5"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=棚卸入力画面!L5"
+              }
+            },
+            "ID": "19111f31ca9f4ee897c38ecb1577f999"
+          }
+        ]
       },
       "DataValidationInfo": {
         "IgnoreBlank": false
@@ -374,7 +417,7 @@
                     "UpdateType": 3
                   }
                 ],
-                "ID": "254c6534-6fa0-43b2-9fde-edf52a297902"
+                "ID": "e7cd04d0-6128-4941-8d1e-3f2eb2f2225b"
               }
             ]
           }
@@ -412,40 +455,6 @@
           "Color": "Background 1",
           "UseCellTypeForeColor": true
         }
-      }
-    },
-    "38,16": {
-      "CellType": {
-        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
-        "CommandList": [
-          {
-            "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
-            "ServerCommandName": "部品数量集計",
-            "Parameters": [
-              {
-                "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
-                "ParamName": "棚卸月"
-              }
-            ],
-            "RefreshAfterFinish": true,
-            "CheckDataValidation": true
-          },
-          {
-            "$type": "Forguncy.Model.UpdateListviewCommand, ServerDesignerCommon",
-            "ListviewName": "リストビュー2",
-            "UpdateType": 6,
-            "UpdateListviewCommandRunTimeMethodSetting": {
-              "MethodName": "Reload",
-              "ParameterValues": {
-                "clearFilter": false,
-                "clearSort": false,
-                "clearRuntimeQueryConditions": false
-              }
-            }
-          }
-        ],
-        "Text": "数量集計",
-        "TemplateKey": "_RS_Normal_Style2"
       }
     }
   },
@@ -573,6 +582,16 @@
       "0,15": 1,
       "0,16": 1,
       "0,17": 1,
+      "0,39": 0,
+      "0,40": 1,
+      "0,41": 1,
+      "0,42": 1,
+      "0,43": 1,
+      "1,39": 1,
+      "1,40": 1,
+      "1,41": 1,
+      "1,42": 1,
+      "1,43": 1,
       "4,2": 3,
       "4,3": 4,
       "4,4": 4,
@@ -1575,21 +1594,11 @@
       "38,11": 1,
       "38,12": 1,
       "38,13": 1,
-      "38,16": 0,
-      "38,17": 1,
-      "38,18": 1,
-      "38,19": 1,
-      "38,20": 1,
       "39,9": 1,
       "39,10": 1,
       "39,11": 1,
       "39,12": 1,
-      "39,13": 1,
-      "39,16": 1,
-      "39,17": 1,
-      "39,18": 1,
-      "39,19": 1,
-      "39,20": 1
+      "39,13": 1
     },
     "SheetStyle": {
       "FontFamily": 0
@@ -1609,7 +1618,6 @@
     "0,13,1,5",
     "0,25,1,8",
     "4,11,2,8",
-    "38,16,2,5",
     "12,37,25,34",
     "11,38,1,9",
     "11,47,1,8",
@@ -1635,7 +1643,8 @@
     "10,55,1,4",
     "10,59,1,4",
     "10,63,1,4",
-    "10,67,1,4"
+    "10,67,1,4",
+    "0,39,2,5"
   ],
   "PageInfo": {
     "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
@@ -1662,4 +1671,4 @@
     "PaperSize": {},
     "Margin": {}
   }
-}//ChTMqvpJjasNmekLxgjA6Ec/1yjMgD6oPlCWfLHKYvE1iRcd6J4uxTvOZlqfJGPumuJKd3aodwgtVHAeAkIFLGjzvr5qaVqZH90NlwrHgZOxp55CS03lyDNiQD4J2LX1tut5jAKOsZgs2mSPRPiuS8j5BT/A1JyZnR6mmCDFywlYqIW/BNRiw1qWsgFDMXfOWYErmR+uNvgubsLrmwaMJCcGJTnMSN6bL90lBCfoNTsPkqoh7bJz84E33m67cKGf8lUCAlQfgTQRIYrWBUCQJ0xCh//vtQzspRdSbOhyqBwTpG6BSz+gHAJNWfBvf9N5l6pvV3l0HF1bql1IPxpXBlDkjN3n1TmsT0+XSqmb/6xKa4HJbppFAet04RpogUUtFfzs6KrmpYCK1+5uD1QKdh9tGMRFVWsUCwHu5FZXdBaxDmPVOsC0RHJokjh2gg21PyNnEnlTsZsvfDa+GGRlVmBwYuSfR1RFYtO8rTIqvBKxv460oZnjf0tPq1+ozCcLBhqTyFvZwOysTYFC6k2MOqeDzsxoIGRTQKQcC6M0alpf4l85SaL2yCc3NOlecpS0oFn6uGNCv5yudLQ5fU1qMPuK3JVjypIOz1AMZGJciYLpFpSR1waeuovU5KBiHa0/b0i30KvtSokPeWt3xlrJoE1/g37x04ntSIniCA8cFDWKMuOlI0fhvF7OJNfDKTaMTMyZsX9pM4ZtC603C8efTrzPz20rlz4+drvCdTGHq/+2qwx4Fse9R3nULmq0ZwfWlJv2FlyVmArkBCCfDsB/c5M9JCq0w9G4XX97WhOxiWv7bqgIl0M7GXDWxx1hezjdYKK7PpTC+eAZVzpnqbAE4UMcnkXI9JnSUlDkCXKZ4osihQ63/qjE9hW7EAkanFGkoI4IbH2mcq5Lg9IewTmdIA==|920
+}//+PpO6vSJuD5KT5KQXUkcn1VuNybd4iqI2IEnm7HP7yTS9BnlkeLKoBC1+EhrIFne/X66VCAFkwYa+8I/UHDT2w/TqyYm2/L0NWnzD/ua++ZDDfjdgXVAPMBM7peK5c+53rGGJblv7+a+Cq9q11k4mvgWyBwWna7AJKywP1kfQORIEIQReYUysD/wHq6f4ICy8ljUZoqN++U+S9FOm13SyyINf2Qg2+ybFjwZ9xcPpf4GB33K3MyXMtz9L0jwCWq4QP344eb1S43cpsnWiUbJRhoinAVRUD0HQWQ3N28cBZHbguG1zutCe7mWfmTzCfXxlk99UzJel0UZmGVKekETgc11QyoYFCpEIMThw7eZR87KX+9p5bVWEG+81KSSrO6DIjCBln4GinN61gtP2SKeDASYEAcqEW9yAEI4lpFAnwjn3ylFtVkQq0cyzLIhwGmSr5jLZEmgy9XXIWxx5XgNAdk/Tvdi7tzPyxH7jyG+9KzjidClfh0e/3zrnL3MKiRzEn9CQ7bMMgrdkdWFwPRagf8W9StQoCDYxUChTcecllOomwGhij/xpaJY1E293lpb+vAgKdAmuATdVdDT3aWCKYLZj9AiVxvGMnoVdCB2mrT7fzr375K0Wz118BefwkhiEqVFf6myxuGBTqMomWi5wP+IHZRz+hObf/vXLZTtWF7Ho9kHmSn8CENKRjZZeKbiAcWj2IiKhe3AwqC5sV3IL0+46g4ahFqCBDiizU6dOGhKZp4XyvjUXJ5IEMBP43Jw9wj3q0Y7Xrc5of0CQCK2ZFrfCsBHuT3Nv3Q2mjy5kS3hHLui+/NaeAdaebziR2/UMw6q/Wc22TwwLwVqarC0dKW6k3MQS2T2Dij6PolBPXVq3tJZyIq/kKIGHUQkHtYV5W1BaluPioyxtD6zTFGnZA==|920

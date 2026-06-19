@@ -5,16 +5,7 @@
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_data",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-06-12T16:12:51.8899974+09:00",
-    "ModuleType": 7,
-    "ToRemoveFiles": [
-      "Tables\\ymia_t_tanaoroshi_data.json"
-    ]
+    "ModuleType": 7
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_file",
@@ -22,16 +13,7 @@
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_datainput",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-06-12T16:12:51.8900525+09:00",
-    "ModuleType": 7,
-    "ToRemoveFiles": [
-      "Tables\\ymia_t_tanaoroshi_datainput.json"
-    ]
+    "ModuleType": 7
   },
   {
     "ModuleName": "Table/mhinban",
@@ -39,29 +21,11 @@
   },
   {
     "ModuleName": "Table/ttanam",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-06-12T16:12:51.8900559+09:00",
-    "ModuleType": 7,
-    "ToRemoveFiles": [
-      "Tables\\ttanam.json"
-    ]
+    "ModuleType": 7
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_datainput2ji",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-06-12T16:12:51.890058+09:00",
-    "ModuleType": 7,
-    "ToRemoveFiles": [
-      "Tables\\ymia_t_tanaoroshi_datainput2ji.json"
-    ]
+    "ModuleType": 7
   },
   {
     "ModuleName": "TableView/ymia_v_mhinban_lastest",
@@ -181,17 +145,7 @@
   },
   {
     "ModuleName": "PCPage/棚卸入力画面",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-06-16T12:09:18.8480833+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\棚卸_\\棚卸入力画面.json",
-      "Pages\\棚卸_\\棚卸入力画面.rd"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "PCPage/仕様書",
@@ -211,17 +165,7 @@
   },
   {
     "ModuleName": "MasterPCPage/棚卸入力",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-06-17T10:13:05.977554+09:00",
-    "ModuleType": 3,
-    "ToRemoveFiles": [
-      "MasterPages\\棚卸入力.json",
-      "MasterPages\\棚卸入力.rd"
-    ]
+    "ModuleType": 3
   },
   {
     "ModuleName": "ServerCommand/棚卸開始",
@@ -289,16 +233,7 @@
   },
   {
     "ModuleName": "PublishConfiguration",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-06-18T13:02:44.4356143+09:00",
-    "ModuleType": 39,
-    "ToRemoveFiles": [
-      "PublishSettingsConfig.json"
-    ]
+    "ModuleType": 39
   },
   {
     "ModuleName": "Plugin",
