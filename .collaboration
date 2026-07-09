@@ -279,7 +279,7 @@
       "UserName": "UNITY\\AA121806",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-07-09T18:14:27.7015555+09:00",
+    "LockDateTime": "2026-07-09T18:26:28.9909569+09:00",
     "ModuleType": 1
   },
   {
@@ -313,23 +313,13 @@
     "ModuleType": 17
   },
   {
-    "ModuleName": "Table/ymia_t_tanaoroshi_fumei",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T17:06:39.4899946+09:00",
-    "ModuleType": 7
-  },
-  {
     "ModuleName": "PCPage/不明情報確認画面",
     "State": 3,
     "LockedBy": {
       "UserName": "UNITY\\AA121806",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-07-09T18:14:45.2906704+09:00",
+    "LockDateTime": "2026-07-09T18:26:28.9913289+09:00",
     "ModuleType": 1
   }
 ]
