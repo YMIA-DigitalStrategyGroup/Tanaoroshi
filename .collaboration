@@ -180,7 +180,7 @@
       "UserName": "UNITY\\AA121806",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-07-09T15:46:05.1987565+09:00",
+    "LockDateTime": "2026-07-09T18:14:27.7016332+09:00",
     "ModuleType": 3,
     "ToRemoveFiles": [
       "MasterPages\\棚卸入力.json",
@@ -273,13 +273,13 @@
     "ModuleType": 41
   },
   {
-    "ModuleName": "PCPage/不明情報確認",
+    "ModuleName": "PCPage/不明情報一覧画面",
     "State": 3,
     "LockedBy": {
       "UserName": "UNITY\\AA121806",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-07-09T15:06:32.8306833+09:00",
+    "LockDateTime": "2026-07-09T18:14:27.7015555+09:00",
     "ModuleType": 1
   },
   {
