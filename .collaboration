@@ -251,5 +251,15 @@
   {
     "ModuleName": "PublishSetting",
     "ModuleType": 41
+  },
+  {
+    "ModuleName": "PCPage/不明情報確認",
+    "State": 3,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-09T15:06:32.8306833+09:00",
+    "ModuleType": 1
   }
 ]
