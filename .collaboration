@@ -311,5 +311,15 @@
     },
     "LockDateTime": "2026-07-09T15:52:20.0050656+09:00",
     "ModuleType": 17
+  },
+  {
+    "ModuleName": "Table/ymia_t_tanaoroshi_fumei",
+    "State": 3,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-09T17:06:39.4899946+09:00",
+    "ModuleType": 7
   }
 ]
