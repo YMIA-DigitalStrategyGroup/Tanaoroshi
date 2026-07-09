@@ -261,5 +261,15 @@
     },
     "LockDateTime": "2026-07-09T15:06:32.8306833+09:00",
     "ModuleType": 1
+  },
+  {
+    "ModuleName": "PCPage/棚番印刷画面",
+    "State": 3,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-09T15:08:22.6870434+09:00",
+    "ModuleType": 1
   }
 ]
