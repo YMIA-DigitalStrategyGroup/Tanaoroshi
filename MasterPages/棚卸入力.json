@@ -37,14 +37,44 @@
             "SelectedIconColorUseItemColor": true,
             "IconColorUseItemColor": true,
             "IsOldMenuPath": false,
-            "CommandList": [
-              {
-                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
-                "PageName": "集計画面"
-              }
-            ],
             "CanVisitRoleList": [
               "FGC_Anonymous"
+            ],
+            "SubItems": [
+              {
+                "Value": "棚卸集計",
+                "Text": "棚卸集計",
+                "SelectedIconColor": "Background 1",
+                "SelectedIconColorUseItemColor": true,
+                "IconColorUseItemColor": true,
+                "IsOldMenuPath": false,
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                    "PageName": "集計画面"
+                  }
+                ],
+                "CanVisitRoleList": [
+                  "FGC_Anonymous"
+                ]
+              },
+              {
+                "Value": "不明品番確認",
+                "Text": "不明品番確認",
+                "SelectedIconColor": "Background 1",
+                "SelectedIconColorUseItemColor": true,
+                "IconColorUseItemColor": true,
+                "IsOldMenuPath": false,
+                "CommandList": [
+                  {
+                    "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                    "PageName": "不明情報一覧画面"
+                  }
+                ],
+                "CanVisitRoleList": [
+                  "FGC_Anonymous"
+                ]
+              }
             ]
           },
           {
@@ -59,6 +89,24 @@
               {
                 "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
                 "PageName": "棚卸開始登録"
+              }
+            ],
+            "CanVisitRoleList": [
+              "FGC_Anonymous"
+            ]
+          },
+          {
+            "Value": "棚番QR発行",
+            "Text": "棚番QR発行",
+            "IconPath": "Mobile/433_qr_code_2.svg",
+            "SelectedIconColor": "Background 1",
+            "SelectedIconColorUseItemColor": true,
+            "IconColorUseItemColor": true,
+            "IsOldMenuPath": false,
+            "CommandList": [
+              {
+                "$type": "Forguncy.Model.NavigateCommand, ServerDesignerCommon",
+                "PageName": "棚番印刷画面"
               }
             ],
             "CanVisitRoleList": [
@@ -143,4 +191,4 @@
       "Size": "1280,0"
     }
   ]
-}//mJLyxFJK2CKSoPvZcv/qnNgJHNY7Ik4Fr/T/f6QCM7SfuJ0MhIPAHP+c7y5KvPuZHxIS6bHgdxUH9UeVC/gp3Dc+WW4wZ6ydzttIL6aZ8lfXPKUDWnc1zn1zZlNqVlBxR3DZYs19URRDFNidBTFC92qJrj2KgFEvFxOtA3BJhfGYr8B3wQJ2H5J1fplqpdoW+HjSk/ctwDSkPwIgCfIqmSTxX0IRLn2jO3ZKkkGpSx9mRyCZFemHeg3r4G0/q16BVyj1bJkRThcaHHOGl35usCenzQVuypwXu6w/JI7OT5xFTaYLTnSFlk0BZP/a+BMGbLGV1J0iUfaqqLI7pxAKSGtxqkCaVCpZ8a/ggf8PTwEOTmJZKs/yBLW7UnyawRVDmxEfCFML2byvd7EfVLGGFK5IdJUEgoMyLM/31eSdiYOKjLKiNlLeCYPSiUoM+kVNit1kr6psLJURslyD5dtlXpaYDziRiLVrJmiJ4YGYUfJs1nRtd1Z5v4olva2TsNs86n02SEB54Nt+G7XhLp2k/1/VKz0O3BgHNZVcuEvHeDXmJmBxz7koJ6gblsRhvzOGeRzqQF/kAmIqgDhpgwDBua/OvAZmT02ABHxSnJnFhPRB22cHm9GZrR5SfwIClQW+onWUq4ohckmlQg0Fzb9DZY3BNg3k/GZ+vQ1d5iNW5CjfgUWqJhzY231qMyqk0t22SB50iMGE3+h2i5LTYf9kpvmoSHdirS6H1qG6bgnwptY1HBA2Z2cI7ZwhZ4DZkH0xuv/pLDtxydFshloqcxh/y0oCJmyDwat9lyRPQ3QMTfu14uqS/VMWQkPfkJTY9W+mARegjrCPDYC/MkxUYqTZsfJi3Ee9giG6cDLNnMkrPVteUCAxOKgi9RYgxa7HwtgykL/mhPMWS+wYY6CdDD51/g==|920
+}//lO1jKlIshxwZK1lOvGBwhYcO4k8xBbOiGfnEoiJK6YWLR6/g6lw8bf/0m6y5kkX+olGSENRPj2wTpE3dj6XD+JnZ9NDZ6kzraR2U9OLD74agZ/qYFlXVUFlJE4nXcV68eVqJTKwtfNBJEIJOEdrWleyFGGt1/wRenWkH1YLCep/8f7s9V6z6lm6RhmYriB/QVBxytLBhqfKHtEJoZUaGiX3/4rEkS5flFcmrrVfyAiIfrK0ARVvVrSW7aBv2afX0nJ0q2qpBFSA0Lk92+AO9ZBeDboxcch4sAcz3HRF22UuIVbw7r0OvB+TDw7fc9vAx6W0LiDpOmU0VeEhE4OvMSP75oMv4aCiixt5t/JMwEOOtpJe29BwxfFULz9t3olUBCybS4FMujoXGzJLKYl7aAk/07lQ52EzGbFvjRVV8jUfDOZ5xyMBSSB88ITgcqYglxV/0B0KyPAmu6uVSteWkkUxt6PkPL73zgpEfw9A+P2X6bsFJGg+1JNj3tQHHUbNqRHuEWObMOpM9z5wBVpFwkGjpuA0JpapM1zQhO45ye1CKH34pc7WXv9AwwIwUsbR1ej4ulRC7mEDatQPvRWF07gm78gw/yNZFWJiByZbahpYZQ5NhM8MKK+jCC1/yxvfS1PbWbXRR5owxOZ9fZH+jex3R9MQsnfTLtmJZXjKS2VxPoYhwZQdu/St1nh+KRTtx57PTHQ7nzafb/k3KteKrxPYzPqKlvklvjfgx4iUN74SkjPvxhmRQpBTCNq9TSm+xNH0NkUKebdBVg+EC3Q8+ql2HSk6mf2/VSHgskLaScLNeBPrJNUh9TJ2HUv57bv7LsDEK7JKujSJ33nBAGzP1/4kLHbZOFNAHPtaWVzwdxJ/RzYtRrcbbP9KXyV9BknPjjQgw/IeR+fIjg6u/MNpDfQ==|920

@@ -1,0 +1,233 @@
+{
+  "Rows": {
+    "Count": 45
+  },
+  "Cols": {
+    "Count": 61
+  },
+  "Values": {
+    "3,2": "タイトル",
+    "3,6": "備考",
+    "4,56": "回答"
+  },
+  "AttachInfos": {
+    "3,1": {
+      "ListViewInfo": {
+        "Name": "リストビュー1",
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "RowIndex": 3,
+        "ColumnIndex": 1,
+        "RowCount": 36,
+        "ColumnCount": 59,
+        "TopCondition": null,
+        "ListViewStyleName": "_RS_Medium2",
+        "ShowColumnHeaderInDesigner": true,
+        "ShowEditStatusIcon": true,
+        "UseSimpleBar": true,
+        "ColumnOperation": 2
+      }
+    },
+    "4,2": {
+      "NameUsedInJavaScript": "不明品タイトル",
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "不明品タイトル",
+        "GUID": "faf95135-40a0-4743-8371-f932c4c86699"
+      }
+    },
+    "4,6": {
+      "NameUsedInJavaScript": "備考",
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "備考",
+        "GUID": "5fec8da6-d813-46ae-b286-394b4b819044"
+      }
+    },
+    "4,23": {
+      "NameUsedInJavaScript": "登録者",
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "登録者",
+        "GUID": "75c32a91-5f72-4f48-b58f-31d9e5bb3093"
+      }
+    },
+    "4,30": {
+      "NameUsedInJavaScript": "作成日",
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "作成日",
+        "GUID": "c9363c33-60da-4235-99c3-e4f5ea9f8942"
+      }
+    },
+    "4,36": {
+      "NameUsedInJavaScript": "確認フラグ",
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "確認フラグ",
+        "GUID": "6027b8eb-8ab5-4ded-add4-4150da6376e3"
+      }
+    },
+    "4,40": {
+      "NameUsedInJavaScript": "画像1",
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "画像1",
+        "GUID": "fdde0a4b-4aea-4d02-8998-5a2308ac6f61",
+        "IsImagePath": true
+      },
+      "CellType": {
+        "$type": "Forguncy.UploadImageCellType, ServerDesignerCommon",
+        "UploadImageLimit": {
+          "AllowExtensions": ".png, .jpeg, .jpg, .bmp, .gif, .ico"
+        },
+        "BuiltIn": true,
+        "UseCellForeColor": true
+      }
+    },
+    "4,46": {
+      "NameUsedInJavaScript": "画像2",
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "画像2",
+        "GUID": "bbc150ba-b37e-45c5-839e-3d87427ebf18"
+      },
+      "CellType": {
+        "$type": "Forguncy.AttachmentCelltype, ServerDesignerCommon",
+        "UploadLimit": {
+          "ExtensionFilter": ".jpg, .jpeg, .png, .gif, .bmp, .xlsx, .docx, .doc, .xls, .pdf"
+        }
+      }
+    },
+    "4,52": {
+      "NameUsedInJavaScript": "ID",
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "ID",
+        "GUID": "c0b4fa20-8a98-4df4-ad9b-2db527910b1e"
+      }
+    },
+    "4,56": {
+      "CellType": {
+        "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
+        "CommandList": [
+          {
+            "$type": "Forguncy.Model.ShowPopupCommand, ServerDesignerCommon",
+            "PageName": "不明情報確認画面",
+            "PassValues": [
+              {
+                "Source": {
+                  "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                  "SerializeProperty": "=不明情報一覧画面!BA5"
+                },
+                "TargetCell": {
+                  "SerializeProperty": "=不明情報確認画面!G1"
+                }
+              }
+            ],
+            "LoadBindingDataOption": 1
+          }
+        ],
+        "Text": "回答",
+        "TemplateKey": "_RS_Normal_Style2"
+      }
+    }
+  },
+  "StyleDatas": {
+    "Styles": [
+      {
+        "FontFamily": 0
+      },
+      {
+        "FontFamily": 0,
+        "Formatter": 1
+      },
+      {
+        "FontFamily": 0,
+        "Foreground": 2,
+        "Underline": true
+      }
+    ],
+    "Types": {
+      "Strs": [
+        "Body",
+        "yyyy/m/d",
+        "Blue"
+      ]
+    },
+    "CellStyles": {
+      "3,23": 0,
+      "3,30": 0,
+      "3,36": 0,
+      "3,37": 0,
+      "3,38": 0,
+      "3,39": 0,
+      "4,2": 0,
+      "4,3": 0,
+      "4,4": 0,
+      "4,5": 0,
+      "4,6": 0,
+      "4,23": 0,
+      "4,30": 1,
+      "4,36": 0,
+      "4,37": 0,
+      "4,38": 0,
+      "4,39": 0,
+      "4,40": 0,
+      "4,46": 2,
+      "4,52": 0,
+      "4,53": 0,
+      "4,54": 0,
+      "4,55": 0,
+      "4,56": 0,
+      "4,57": 0
+    },
+    "SheetStyle": {
+      "FontFamily": 0
+    }
+  },
+  "Spans": [
+    "5,1,34,59",
+    "4,2,1,4",
+    "3,2,1,4",
+    "4,6,1,17",
+    "3,6,1,17",
+    "4,23,1,7",
+    "3,23,1,7",
+    "4,36,1,4",
+    "3,36,1,4",
+    "4,30,1,6",
+    "3,30,1,6",
+    "4,52,1,4",
+    "3,52,1,4",
+    "4,40,1,6",
+    "3,40,1,6",
+    "4,46,1,6",
+    "3,46,1,6",
+    "4,56,1,3",
+    "3,56,1,3"
+  ],
+  "PageInfo": {
+    "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
+    "MasterPageName": "棚卸入力",
+    "PermissionData": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionData, Forguncy.RbacPermission.Core",
+      "permissionResource": {
+        "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionResource, Forguncy.RbacPermission.Core"
+      },
+      "permissionBindings": [
+        {
+          "$type": "Forguncy.RbacPermission.Core.Impl.Page.PagePermissionBinding, Forguncy.RbacPermission.Core",
+          "roleNames": [
+            "FGC_LoginUser"
+          ]
+        }
+      ]
+    },
+    "RowBreakLines": [],
+    "RepeatRangeSettings": []
+  },
+  "PrintInfo": {
+    "PaperSize": {},
+    "Margin": {}
+  }
+}//y4sBKtjEiMUALD//mF+SufTbd+XtllJ0FQ2Vyct+7juG2Gbfdv3hVQ3+xuZEugH/awKcpeXul8Me8w4iKBCwLUKtWViDaN9T2+ztluz2y2DKuBygI0kpZxHHlgmI2STEQQdbL33/ZYEcSRLAQAPmx1mhtdsSNs66+1qWL5NzJNrgHZZqsdosmEswH3tr0yLzr0uVsBotohNIglKZ6iRKuuOGJmgoSd5U1Sw/whRkLtoazYiw08zv+t3oiOXhRKoY/OMBHqHlEOxaTPkxhWlVa8HAVoubFoGWH0xeTSPEUNhtfZfyJpnGKWkRjjgvdGgl+iyQcMdM9RJGSFrVGJynuPagxnFJSSdfA2wVYYsiyIUX9c6Umo6vuXf5ybMEAhuMvuqKUyP8PNJ77Gq2mVTpM0KXWewagQ5qNzldQy1ivA3jk49WBX+sgNeWT4RKZYHxzulKDjuAscoyB0FwE82NkCBeTY7rkwjDbyDsneKA3Wmml3YQlW66KNnyDnX2CTdm7SxFhhkTzMkEBPeelJ6Uxrp6DHi7h5flodlaj5KoW8SWkBWOeYpcfUI7JkMazZ/h2fypqqJRUnLqogV/6ciZnSMWY4AtJRaTxn8RIEgPLQOI5i2MclRJQ961xlQ6Jssx0PUKdk6taaywoiVs4WTUNOwQsEQdmwTYxEzSzdAa8XhXkehLvdxR8iiJG1YxtQBGI9l6cbHpqdzn6knT9pyjuM4qfzjXr4Cypz2W5wPTPVQ+REU/XcEgxnPVRu6sHs57O172wrtFxJ5uECM3QjuC78UifckuT0dZQZ5t7VUu0in2889BUY7jBezwCaREyju8SYVb684AuOcxvX+koWYBnKmUZCPQb9Gb40nvEo8m3tYvTFYYi2G31NVj2vVwwIP1+1coIlo/CnM4mDMSUNUhjg==|920

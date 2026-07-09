@@ -157,17 +157,7 @@
   },
   {
     "ModuleName": "PCPage/スマホデータ確認",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T17:04:58.3801178+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\スマホデータ確認.json",
-      "Pages\\スマホデータ確認.rd"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "MasterPCPage/FGC_ユーザーマスターページ",
@@ -175,17 +165,7 @@
   },
   {
     "ModuleName": "MasterPCPage/棚卸入力",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T18:14:27.7016332+09:00",
-    "ModuleType": 3,
-    "ToRemoveFiles": [
-      "MasterPages\\棚卸入力.json",
-      "MasterPages\\棚卸入力.rd"
-    ]
+    "ModuleType": 3
   },
   {
     "ModuleName": "ServerCommand/棚卸開始",
@@ -193,16 +173,7 @@
   },
   {
     "ModuleName": "ServerCommand/部品数量集計",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T14:32:12.2475635+09:00",
-    "ModuleType": 15,
-    "ToRemoveFiles": [
-      "ServerCommands\\部品数量集計.json"
-    ]
+    "ModuleType": 15
   },
   {
     "ModuleName": "ApplicationSetting",
@@ -274,62 +245,26 @@
   },
   {
     "ModuleName": "PCPage/不明情報一覧画面",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T18:26:28.9909569+09:00",
     "ModuleType": 1
   },
   {
     "ModuleName": "PCPage/棚番印刷画面",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T15:08:22.6870434+09:00",
     "ModuleType": 1
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_tanaqr",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T15:44:46.3804953+09:00",
     "ModuleType": 7
   },
   {
     "ModuleName": "PageReport/棚番QR",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T15:52:20.0050656+09:00",
     "ModuleType": 17
   },
   {
     "ModuleName": "PCPage/不明情報確認画面",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T18:26:28.9913289+09:00",
     "ModuleType": 1
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_fumei",
-    "State": 3,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-09T18:26:47.4486952+09:00",
     "ModuleType": 7
   }
 ]

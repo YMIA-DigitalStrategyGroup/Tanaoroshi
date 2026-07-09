@@ -1,0 +1,48 @@
+{
+  "Name": "棚番QR",
+  "DataSources": [
+    {
+      "Name": "棚番QR",
+      "GUID": "76cc60ba-a09e-492b-88b5-59579800151a",
+      "DataSourceSetting": {
+        "TableName": "ymia_t_tanaoroshi_tanaqr",
+        "BindingInfos": [
+          {
+            "GUID": "25d6ab6c-c3ad-4c66-b536-aeb9720f4c2c",
+            "BindingInfo": {
+              "TableName": "ymia_t_tanaoroshi_tanaqr",
+              "ColumnName": "tanaQR",
+              "GUID": "802e2a18-95ae-4a0b-af35-c32ad5c6ccc6"
+            },
+            "ColumnName": "tanaQR"
+          }
+        ]
+      },
+      "ColumnsType": [
+        "string"
+      ]
+    }
+  ],
+  "PermissionData": {
+    "$type": "Forguncy.RbacPermission.Core.Impl.ActiveReport.ActiveReportPermissionData, Forguncy.RbacPermission.Core",
+    "permissionResource": {
+      "$type": "Forguncy.RbacPermission.Core.Impl.ActiveReport.ActiveReportPermissionResource, Forguncy.RbacPermission.Core"
+    },
+    "permissionBindings": [
+      {
+        "$type": "Forguncy.RbacPermission.Core.Impl.ActiveReport.ActiveReportPermissionBinding, Forguncy.RbacPermission.Core",
+        "activeReportPermissionType": 1,
+        "roleNames": [
+          "FGC_LoginUser"
+        ]
+      },
+      {
+        "$type": "Forguncy.RbacPermission.Core.Impl.ActiveReport.ActiveReportPermissionBinding, Forguncy.RbacPermission.Core",
+        "activeReportPermissionType": 2,
+        "roleNames": [
+          "FGC_LoginUser"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Report111</dd:Name>
+	<Body>
+		<Height>29.7cm</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<List Name="List1">
+								<Custom><ReportStyle>
+	<StyleId>2b3ab600-cc7f-4ffe-abcb-7adba37adff5</StyleId>
+	<StyleName>Default List</StyleName>
+</ReportStyle></Custom>
+								<Top>0.0157in</Top>
+								<Left>0.0157in</Left>
+								<Width>7.2343in</Width>
+								<Height>2.7343in</Height>
+								<ZIndex>2</ZIndex>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">10.7343in</dd:FixedHeight>
+								<ReportItems>
+									<Textbox Name="TextBox1">
+										<Left>0.2709in</Left>
+										<Width>2.7291in</Width>
+										<Height>0.5315in</Height>
+										<Style>
+											<BackgroundColor>=Theme.Colors!Light1</BackgroundColor>
+											<Color>=Theme.Colors!Dark1</Color>
+											<FontFamily>=Theme.Fonts!MajorFont.Family</FontFamily>
+											<FontSize>24pt</FontSize>
+											<FontStyle>=Theme.Fonts!MajorFont.Style</FontStyle>
+											<FontWeight>=Theme.Fonts!MajorFont.Weight</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+										</Style>
+										<Custom><ReportStyle>
+	<StyleId>0b65e860-6c8c-4d79-9c06-69f939517ae6</StyleId>
+	<StyleName>Dark 1 Major</StyleName>
+</ReportStyle></Custom>
+										<Value>=Fields!tanaQR.Value</Value>
+									</Textbox>
+									<CustomReportItem Name="Barcode1">
+										<Type>Barcode</Type>
+										<Top>0.5315in</Top>
+										<Left>0.75in</Left>
+										<Width>1.75in</Width>
+										<Height>1.75in</Height>
+										<Style>
+											<FontFamily>Courier New</FontFamily>
+											<FontSize>8pt</FontSize>
+											<TextAlign>Center</TextAlign>
+										</Style>
+										<ZIndex>1</ZIndex>
+										<CustomProperties>
+											<CustomProperty>
+												<Name>dd:Symbology</Name>
+												<Value>QRCode</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>dd:Value</Name>
+												<Value>=Fields!tanaQR.Value</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>dd:DataElementStyle</Name>
+												<Value>Auto</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>dd:QuietZone.Left</Name>
+												<Value>0cm</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>dd:QuietZone.Right</Name>
+												<Value>0cm</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>dd:QuietZone.Top</Name>
+												<Value>0cm</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>dd:QuietZone.Bottom</Name>
+												<Value>0cm</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>dd:SupplementOptions.SupplementSpacing</Name>
+												<Value>0cm</Value>
+											</CustomProperty>
+										</CustomProperties>
+									</CustomReportItem>
+								</ReportItems>
+							</List>
+						</ReportItems>
+						<PaperOrientation>Portrait</PaperOrientation>
+						<Width>21cm</Width>
+						<Height>29.7cm</Height>
+						<LeftMargin>1cm</LeftMargin>
+						<TopMargin>1cm</TopMargin>
+						<RightMargin>1cm</RightMargin>
+						<BottomMargin>1cm</BottomMargin>
+					</Page>
+				</Pages>
+				<DataSetName>棚番QR_DataSet</DataSetName>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1cm</BottomMargin>
+	<LeftMargin>1cm</LeftMargin>
+	<RightMargin>1cm</RightMargin>
+	<TopMargin>1cm</TopMargin>
+	<PageHeight>29.7cm</PageHeight>
+	<PageWidth>21cm</PageWidth>
+	<Width>21cm</Width>
+	<DataSources>
+		<DataSource Name="棚番QR">
+			<ConnectionProperties>
+				<ConnectString>jsondoc=http://localhost:35705/Forguncy/ARDataSource/GetDataSource/76cc60ba-a09e-492b-88b5-59579800151a;schemadata={"type":"array","items":{"type":"object","properties":{"tanaQR":{"type":"string"}}}}</ConnectString>
+				<DataProvider>JSON</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="棚番QR_DataSet">
+			<Fields>
+				<Field Name="tanaQR">
+					<DataField>tanaQR</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>$.[*]</CommandText>
+				<DataSourceName>棚番QR</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>DisplayType</Name>
+			<Value>Page</Value>
+		</CustomProperty>
+		<CustomProperty>
+			<Name>SizeType</Name>
+			<Value>Default</Value>
+		</CustomProperty>
+		<CustomProperty>
+			<Name>CollapseWhiteSpace</Name>
+			<Value>True</Value>
+		</CustomProperty>
+		<CustomProperty>
+			<Name>PaperOrientation</Name>
+			<Value>Portrait</Value>
+		</CustomProperty>
+	</CustomProperties>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>DefaultTheme.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>
