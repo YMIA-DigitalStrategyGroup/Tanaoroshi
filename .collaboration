@@ -245,7 +245,17 @@
   },
   {
     "ModuleName": "PCPage/不明情報一覧画面",
-    "ModuleType": 1
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-10T14:44:49.960322+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\不明情報一覧画面.json",
+      "Pages\\不明情報一覧画面.rd"
+    ]
   },
   {
     "ModuleName": "PCPage/棚番印刷画面",
@@ -261,16 +271,26 @@
   },
   {
     "ModuleName": "PCPage/不明情報確認画面",
-    "ModuleType": 1
-  },
-  {
-    "ModuleName": "Table/ymia_t_tanaoroshi_fumei",
     "State": 1,
     "LockedBy": {
       "UserName": "UNITY\\AA121806",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-07-10T14:26:32.8736327+09:00",
+    "LockDateTime": "2026-07-10T14:44:49.9606217+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\不明情報確認画面.json",
+      "Pages\\不明情報確認画面.rd"
+    ]
+  },
+  {
+    "ModuleName": "Table/ymia_t_tanaoroshi_fumei",
+    "State": 2,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-10T14:44:49.9531234+09:00",
     "ModuleType": 7,
     "ToRemoveFiles": [
       "Tables\\ymia_t_tanaoroshi_fumei.json"
