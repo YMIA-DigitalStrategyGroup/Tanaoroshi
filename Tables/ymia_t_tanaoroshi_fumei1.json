@@ -1,5 +1,5 @@
 {
-  "Name": "ymia_t_tanaoroshi_fumei",
+  "Name": "ymia_t_tanaoroshi_fumei1",
   "Columns": [
     {
       "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
@@ -49,17 +49,17 @@
     },
     {
       "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
-      "DatabaseColumnType": "varchar",
-      "MaxLength": 190,
+      "DatabaseColumnType": "mediumblob",
+      "MaxLength": -1,
       "Name": "画像1",
-      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+      "ColumnType": "System.Byte[], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
     },
     {
       "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
-      "DatabaseColumnType": "varchar",
-      "MaxLength": 190,
+      "DatabaseColumnType": "mediumblob",
+      "MaxLength": -1,
       "Name": "画像2",
-      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+      "ColumnType": "System.Byte[], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
     },
     {
       "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
