@@ -257,17 +257,7 @@
   },
   {
     "ModuleName": "PageReport/棚番QR",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-07-21T11:08:22.1114488+09:00",
-    "ModuleType": 17,
-    "ToRemoveFiles": [
-      "Reports\\棚番QR.json",
-      "Reports\\棚番QR.rdlx"
-    ]
+    "ModuleType": 17
   },
   {
     "ModuleName": "PCPage/不明情報確認画面",

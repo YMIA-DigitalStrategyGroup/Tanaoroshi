@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
-	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Report111</dd:Name>
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Report1111</dd:Name>
 	<Body>
 		<Height>29.7cm</Height>
 		<ReportItems>
@@ -15,14 +15,15 @@
 </ReportStyle></Custom>
 								<Top>0.0157in</Top>
 								<Left>0.0157in</Left>
-								<Width>7.2343in</Width>
+								<Width>3.7343in</Width>
 								<Height>2.7343in</Height>
 								<ZIndex>2</ZIndex>
-								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">10.7343in</dd:FixedHeight>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">11.4843in</dd:FixedHeight>
+								<dd:OverflowName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">OverflowPlaceHolder1</dd:OverflowName>
 								<ReportItems>
 									<Textbox Name="TextBox1">
-										<Left>0.2709in</Left>
-										<Width>2.7291in</Width>
+										<Left>0.25in</Left>
+										<Width>3.25in</Width>
 										<Height>0.5315in</Height>
 										<Style>
 											<BackgroundColor>=Theme.Colors!Light1</BackgroundColor>
@@ -35,6 +36,7 @@
 											<PaddingLeft>2pt</PaddingLeft>
 											<PaddingRight>2pt</PaddingRight>
 											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
 										</Style>
 										<Custom><ReportStyle>
 	<StyleId>0b65e860-6c8c-4d79-9c06-69f939517ae6</StyleId>
@@ -44,8 +46,8 @@
 									</Textbox>
 									<CustomReportItem Name="Barcode1">
 										<Type>Barcode</Type>
-										<Top>0.5315in</Top>
-										<Left>0.75in</Left>
+										<Top>0.5in</Top>
+										<Left>1in</Left>
 										<Width>1.75in</Width>
 										<Height>1.75in</Height>
 										<Style>
@@ -91,14 +93,20 @@
 									</CustomReportItem>
 								</ReportItems>
 							</List>
+							<OverflowPlaceHolder Name="OverflowPlaceHolder1">
+								<Height>11.4843in</Height>
+								<Left>3.746in</Left>
+								<Top>0.0157in</Top>
+								<Width>3.7343in</Width>
+							</OverflowPlaceHolder>
 						</ReportItems>
 						<PaperOrientation>Portrait</PaperOrientation>
 						<Width>21cm</Width>
 						<Height>29.7cm</Height>
 						<LeftMargin>1cm</LeftMargin>
-						<TopMargin>1cm</TopMargin>
+						<TopMargin>0cm</TopMargin>
 						<RightMargin>1cm</RightMargin>
-						<BottomMargin>1cm</BottomMargin>
+						<BottomMargin>0cm</BottomMargin>
 					</Page>
 				</Pages>
 				<DataSetName>棚番QR_DataSet</DataSetName>
