@@ -266,5 +266,15 @@
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_fumei",
     "ModuleType": 7
+  },
+  {
+    "ModuleName": "PageReport/レポート1",
+    "State": 3,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-21T14:00:54.0558557+09:00",
+    "ModuleType": 17
   }
 ]
