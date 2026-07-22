@@ -307,7 +307,17 @@
   },
   {
     "ModuleName": "PCPage/不明情報確認画面",
-    "ModuleType": 1
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-22T16:48:56.1217626+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\不明情報確認画面.json",
+      "Pages\\不明情報確認画面.rd"
+    ]
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_fumei",
