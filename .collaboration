@@ -331,5 +331,16 @@
     "ToRemoveFiles": [
       "Tables\\ymia_t_tanaoroshi_fumei.json"
     ]
+  },
+  {
+    "ModuleName": "TableView/ユーザー情報ビュー",
+    "State": 3,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-22T16:50:07.3622787+09:00",
+    "ModuleType": 23,
+    "ExclusiveType": 0
   }
 ]
