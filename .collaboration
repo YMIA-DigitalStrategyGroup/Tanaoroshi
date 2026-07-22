@@ -281,7 +281,17 @@
   },
   {
     "ModuleName": "PCPage/不明情報一覧画面",
-    "ModuleType": 1
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-07-22T16:56:14.2540398+09:00",
+    "ModuleType": 1,
+    "ToRemoveFiles": [
+      "Pages\\不明情報一覧画面.json",
+      "Pages\\不明情報一覧画面.rd"
+    ]
   },
   {
     "ModuleName": "PCPage/棚番印刷画面",
