@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
-	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Report1111</dd:Name>
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Report1111111111</dd:Name>
 	<Body>
 		<Height>29.7cm</Height>
 		<ReportItems>
@@ -13,15 +13,14 @@
 	<StyleId>2b3ab600-cc7f-4ffe-abcb-7adba37adff5</StyleId>
 	<StyleName>Default List</StyleName>
 </ReportStyle></Custom>
-								<Top>0.0157in</Top>
-								<Left>0.0157in</Left>
-								<Width>3.7343in</Width>
-								<Height>2.7343in</Height>
+								<Width>3.7291in</Width>
+								<Height>2.75in</Height>
 								<ZIndex>2</ZIndex>
-								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">11.4843in</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">3.7504in</dd:FixedWidth>
 								<dd:OverflowName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">OverflowPlaceHolder1</dd:OverflowName>
 								<ReportItems>
 									<Textbox Name="TextBox1">
+										<Top>0.25in</Top>
 										<Left>0.25in</Left>
 										<Width>3.25in</Width>
 										<Height>0.5315in</Height>
@@ -46,7 +45,7 @@
 									</Textbox>
 									<CustomReportItem Name="Barcode1">
 										<Type>Barcode</Type>
-										<Top>0.5in</Top>
+										<Top>0.75in</Top>
 										<Left>1in</Left>
 										<Width>1.75in</Width>
 										<Height>1.75in</Height>
@@ -94,18 +93,60 @@
 								</ReportItems>
 							</List>
 							<OverflowPlaceHolder Name="OverflowPlaceHolder1">
-								<Height>11.4843in</Height>
-								<Left>3.746in</Left>
-								<Top>0.0157in</Top>
-								<Width>3.7343in</Width>
+								<Height>2.75in</Height>
+								<Left>4.5173in</Left>
+								<Top>0cm</Top>
+								<Width>3.7504in</Width>
+								<OverflowName>OverflowPlaceHolder2</OverflowName>
+							</OverflowPlaceHolder>
+							<OverflowPlaceHolder Name="OverflowPlaceHolder2">
+								<Height>2.75in</Height>
+								<Left>0cm</Left>
+								<Top>3in</Top>
+								<Width>3.7504in</Width>
+								<OverflowName>OverflowPlaceHolder4</OverflowName>
+							</OverflowPlaceHolder>
+							<OverflowPlaceHolder Name="OverflowPlaceHolder3">
+								<Height>2.75in</Height>
+								<Left>0cm</Left>
+								<Top>6in</Top>
+								<Width>3.7504in</Width>
+								<OverflowName>OverflowPlaceHolder5</OverflowName>
+							</OverflowPlaceHolder>
+							<OverflowPlaceHolder Name="OverflowPlaceHolder4">
+								<Height>2.75in</Height>
+								<Left>4.5in</Left>
+								<Top>3in</Top>
+								<Width>3.7504in</Width>
+								<OverflowName>OverflowPlaceHolder3</OverflowName>
+							</OverflowPlaceHolder>
+							<OverflowPlaceHolder Name="OverflowPlaceHolder5">
+								<Height>2.75in</Height>
+								<Left>4.5in</Left>
+								<Top>6in</Top>
+								<Width>3.7504in</Width>
+								<OverflowName>OverflowPlaceHolder6</OverflowName>
+							</OverflowPlaceHolder>
+							<OverflowPlaceHolder Name="OverflowPlaceHolder6">
+								<Height>2.75in</Height>
+								<Left>0cm</Left>
+								<Top>8.9429in</Top>
+								<Width>3.7504in</Width>
+								<OverflowName>OverflowPlaceHolder7</OverflowName>
+							</OverflowPlaceHolder>
+							<OverflowPlaceHolder Name="OverflowPlaceHolder7">
+								<Height>2.75in</Height>
+								<Left>4.5173in</Left>
+								<Top>8.9429in</Top>
+								<Width>3.7504in</Width>
 							</OverflowPlaceHolder>
 						</ReportItems>
 						<PaperOrientation>Portrait</PaperOrientation>
 						<Width>21cm</Width>
 						<Height>29.7cm</Height>
-						<LeftMargin>1cm</LeftMargin>
+						<LeftMargin>0cm</LeftMargin>
 						<TopMargin>0cm</TopMargin>
-						<RightMargin>1cm</RightMargin>
+						<RightMargin>0cm</RightMargin>
 						<BottomMargin>0cm</BottomMargin>
 					</Page>
 				</Pages>

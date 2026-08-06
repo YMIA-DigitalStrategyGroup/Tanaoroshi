@@ -7,6 +7,7 @@
   },
   "Values": {
     "0,1": "ID",
+    "0,13": "登録者ID",
     "2,1": "タイトル",
     "5,1": "内容・コメント等",
     "19,1": "回答",
@@ -14,12 +15,22 @@
     "32,1": "回答済",
     "37,1": "更新"
   },
+  "Formulas": {
+    "29,6": "ODATA(\"ユーザー情報ビュー?$select=氏名&$filter=ユーザー名 eq \"&IF(ISBLANK(R1),\"null\",\"'\"&R1&\"'\"))"
+  },
   "AttachInfos": {
     "0,6": {
       "BindingInfo": {
         "TableName": "ymia_t_tanaoroshi_fumei",
         "ColumnName": "ID",
         "GUID": "b507f5fb-c0fc-4f9b-bceb-5d0fd24ba053"
+      }
+    },
+    "0,17": {
+      "BindingInfo": {
+        "TableName": "ymia_t_tanaoroshi_fumei",
+        "ColumnName": "登録者",
+        "GUID": "8176de24-94cf-41e9-928d-4f85435e7a45"
       }
     },
     "2,6": {
@@ -80,13 +91,6 @@
             }
           }
         ]
-      }
-    },
-    "29,6": {
-      "BindingInfo": {
-        "TableName": "ymia_t_tanaoroshi_fumei",
-        "ColumnName": "登録者",
-        "GUID": "059574b7-4727-49a5-8a67-c4725af7bd6a"
       }
     },
     "32,6": {
@@ -435,12 +439,14 @@
     "6,1,12,17",
     "20,1,8,17",
     "29,1,2,5",
-    "29,6,2,12",
     "32,1,2,5",
     "32,6,2,12",
     "37,1,2,7",
     "2,19,16,25",
-    "20,19,16,25"
+    "20,19,16,25",
+    "0,13,1,4",
+    "0,17,1,7",
+    "29,6,2,12"
   ],
   "PageInfo": {
     "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
@@ -465,4 +471,4 @@
     "PaperSize": {},
     "Margin": {}
   }
-}//Foe4V9kijCk7iqiUd2cnt4qR1ygi7SWRFTANaApfkN3yu+cm6BWyO/Qg9hRiTYz+2xueXT+HXVMx9VCMCa4WtLvdy5c7FZMSOPATdY/vJhEkOQlYiaB0OkgX2Fia+V9Sdr/i8Hg2/fd1uRl7ipBXotbsbSDsTZ3YDm/1uUmAz8lsKJQDVzmMfcbLG9Ecj1si9NDTsp000Iyfugj9jwDvL5yfCeM9F3azssFVdRRynS5SOA+gcajJgsi0WCreF9Hrilhnm3qRLAc0oSz51g+Ka74A3w17tIjDQT7pLb3M/eRCxZyI3dEc3x36zpKUN53fJifqnu834itWNFmrL41dwsEbhlB3Qybk60QjVJVJejma6ovJkeHca42ElxjzZbNAN+B7ZBHo3a0m2FddUjf1RaXfiIPLygUkxYS+/6AUrQOw2pUvGtRQ5zthJFqPo1Sk+9GBmc9DGtxcgjVHdoHJhVuPG7cy6GUnfjK7BUOOjjXn+4B34XKRsTuxWg+gdTeb9iAVWy5s76owZL8OPWGyXw7DUnUY/BamQEvccIvMy9tFNQKdAF6gxJtSn+BeptwyQOL5ruJZtj8cf7h3w/nO9iuhZdK5m5J1FikKikRJvb76kos4OUA841rVpAI7XowDbYKzEB8rOpo51g839AqqzGlR4CHL7grNyI86+h1IT1SmXd5+vgbcwvrb2MiXpO7IQEYeU+HOqH3OMOSuHVaAE5qjr6j0vUf+vLJQoWeNUCl7QgrHb4JMtFF6kiEcH8ue5CZglgJ2cGCU6OG6kG4oM9W4AFQFPKXpxa7Zc3d76pDs9HK2JWh6uXjPK7fWInKiWdy+uVYTjkj28RgwhDbUZ+ny6klABq4W6oiBMvMiWD0hFAP3jLc2S+vYUliomSOOrru7HpPwP/KF9IzakQsLaA==|920
+}//7ygS7nlAaHK8znr59L96pMYbzCXN93b4yRlsfkjYZaSFN9zGpLy7QjLN5Q5xbEiedkrNzVbfOg1wovGoI7nXZVzppc550BjeCnE8V5u/Cm5GdmkICZRQSTwa0N1PQg+3W5Ir3sBJ70fRjtlbLwc88kuuCb97v7Tut3EI3wCOciw6wYjTHZFhlsil+0H+amCRifZKOlWtyjsZib2zS1he0oqsB3gdKB40LE8WrUutOx85SoAM6Jjtc4AgJ0PiLZWPFPsqn9N7nUX0nMMmhlSx0ZczIAAjL1+2+wXfH+0yfcM2J2YYam9nIFTlSbuV/tG4OWaABZDIiETt2yChla258lri85t5FNRhyIDM9t6LRL+jk2Rmw80g8vt5+eAlEigprWk7lnINoDo/20zkbZvyNXkingmfi7KFzN66wLmUwKO5RouX3y+6c07L+l3S6jf5YwgeEIL2iXhYgAHrA0cC9XRLX74pTheEGGxybDN7szKtcEXKXr8PKAKA1CkWHxLOP3if8+Du0GhlU6PWMq5vPe3Z4F+iRs9uAjdz+66ODfM0xBGUOrtxae0Zt9fq7GgK3+NrlQPxY883NYb7dET/nyBZRWODrhVnWNNfdsODy6lxtA7AMj5sbEC4G8h59kjjSNrwRJxWZLFu9QVNGhYnw4UmZVJJ3NU5bW6xOiYVzQj4wKWnWETDUPFtUHVauP/c2212A7+ljPkpkDNDynjJ2f2DCEfxTbD8AA6v+UXvKbENc1oasVkb2lqkcC1KX28sAWLjvwvpaMscm6EeSbNNRZUu9Ym8CXV3Bf+V5LjlqvH9a+0jGLgnHXA8+Pxp21GjjrVSf5RvjDHSvSIadaDcGV6T18w/TofnAZcB5BLCOi01L78axIcDe9KsNc1jQm6n4mZRM5yINe5tKJ4UF7+C/w==|920
