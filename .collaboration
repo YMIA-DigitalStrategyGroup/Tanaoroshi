@@ -5,7 +5,16 @@
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_data",
-    "ModuleType": 7
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-19T17:17:09.9253557+09:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\ymia_t_tanaoroshi_data.json"
+    ]
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_file",
@@ -13,7 +22,16 @@
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_datainput",
-    "ModuleType": 7
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-19T17:17:09.9257396+09:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\ymia_t_tanaoroshi_datainput.json"
+    ]
   },
   {
     "ModuleName": "Table/mhinban",
@@ -21,11 +39,29 @@
   },
   {
     "ModuleName": "Table/ttanam",
-    "ModuleType": 7
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-19T17:17:09.9257642+09:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\ttanam.json"
+    ]
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_datainput2ji",
-    "ModuleType": 7
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-19T17:17:09.9257769+09:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\ymia_t_tanaoroshi_datainput2ji.json"
+    ]
   },
   {
     "ModuleName": "TableView/ymia_v_mhinban_lastest",
