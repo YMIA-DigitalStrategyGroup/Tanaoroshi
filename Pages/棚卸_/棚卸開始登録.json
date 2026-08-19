@@ -3,7 +3,7 @@
     "InLogicalVisibleIndexes": [
       0
     ],
-    "Count": 11
+    "Count": 13
   },
   "Cols": {
     "Count": 22
@@ -12,11 +12,13 @@
     "0,1": "本日日付",
     "0,18": "件数",
     "3,1": "棚卸対象月",
-    "7,1": "棚卸情報\r\n取込",
-    "7,12": "終了"
+    "5,1": "Remacs棚卸番号",
+    "9,1": "棚卸情報\r\n取込",
+    "9,12": "終了"
   },
   "Formulas": {
-    "0,6": "TODAY()"
+    "0,6": "TODAY()",
+    "5,8": "ODATA(\"ttanam?$select=TANAM_NBR&$top=1&$orderby=TANAM_NBR desc\")"
   },
   "AttachInfos": {
     "0,12": {
@@ -62,10 +64,14 @@
               "Order": 1
             }
           ]
+        },
+        "CellDefaultValue": {
+          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+          "SerializeProperty": "=TEXT(棚卸開始登録!G1,\"yyyymm\")"
         }
       }
     },
-    "7,1": {
+    "9,1": {
       "CellType": {
         "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
         "CommandList": [
@@ -88,7 +94,7 @@
                 }
               }
             },
-            "ID": "cf361bad08114a4f9f225e9ddc87380b"
+            "ID": "37657064dc2e41b08cd964df5ec1685a"
           },
           {
             "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
@@ -127,7 +133,7 @@
                           "ConfirmIcon": 1
                         },
                         "CommandList": [],
-                        "ID": "3f0afe63-38ad-46da-993e-1c81bd007bb7"
+                        "ID": "e045d21b-b630-4985-810f-2a8e20302c6e"
                       },
                       {
                         "CommandList": [
@@ -135,12 +141,12 @@
                             "$type": "Forguncy.Model.StopCommand, ServerDesignerCommon"
                           }
                         ],
-                        "ID": "309a9310-21c3-4eff-9f3d-8702f6a90e67"
+                        "ID": "aa892aed-7449-441e-858d-d82cdfd3b422"
                       }
                     ]
                   }
                 ],
-                "ID": "20696f20-9de9-4d79-b00e-c16a1c4c00a9"
+                "ID": "b3bd9e71-38a4-43d2-b27b-06828aef0a13"
               }
             ]
           },
@@ -167,6 +173,14 @@
                           "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
                           "SerializeProperty": "=棚卸開始登録!I4"
                         }
+                      },
+                      {
+                        "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
+                        "ParamName": "Remacs棚卸番号",
+                        "Value": {
+                          "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                          "SerializeProperty": "=棚卸開始登録!I6"
+                        }
                       }
                     ],
                     "RefreshAfterFinish": true,
@@ -177,7 +191,7 @@
                     "MessageFormula": "棚卸情報を読み込み、棚卸を開始します！！"
                   }
                 ],
-                "ID": "dad5ede1-edc6-4bcd-bdab-44b23685f658"
+                "ID": "bdb9c8e3-814a-4b06-940e-818bc3d62a01"
               }
             ]
           }
@@ -186,7 +200,7 @@
         "TemplateKey": "_RS_Normal_Style2"
       }
     },
-    "7,12": {
+    "9,12": {
       "CellType": {
         "$type": "Forguncy.ButtonCellType, ServerDesignerCommon",
         "CommandList": [
@@ -238,6 +252,35 @@
       {
         "BorderTop": 0,
         "BorderRight": 0
+      },
+      {
+        "FontFamily": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "BorderLeft": 0
+      },
+      {
+        "BorderRight": 0
+      },
+      {
+        "Background": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "BorderTop": 0,
+        "BorderLeft": 0
       },
       {
         "BorderBottom": 0,
@@ -367,19 +410,14 @@
       "3,20": 0,
       "3,21": 0,
       "4,0": 0,
-      "4,1": 4,
-      "4,2": 4,
-      "4,3": 4,
-      "4,4": 4,
-      "4,5": 4,
-      "4,6": 4,
-      "4,7": 4,
-      "4,8": 8,
-      "4,9": 9,
-      "4,10": 9,
-      "4,11": 9,
-      "4,12": 9,
-      "4,13": 9,
+      "4,1": 8,
+      "4,2": 8,
+      "4,3": 8,
+      "4,4": 8,
+      "4,5": 8,
+      "4,6": 8,
+      "4,7": 8,
+      "4,8": 9,
       "4,14": 10,
       "4,15": 0,
       "4,16": 0,
@@ -388,26 +426,36 @@
       "4,19": 0,
       "4,20": 0,
       "4,21": 0,
-      "7,1": 11,
-      "7,12": 12,
-      "7,13": 0,
-      "7,14": 0,
-      "7,15": 0,
-      "7,16": 0,
-      "7,17": 0,
-      "7,18": 0,
-      "7,19": 0,
-      "7,20": 0,
-      "8,12": 0,
-      "8,13": 0,
-      "8,14": 0,
-      "8,15": 0,
-      "8,16": 0,
-      "8,17": 0,
-      "8,18": 0,
-      "8,19": 0,
-      "8,20": 0,
-      "9,12": 0,
+      "5,1": 11,
+      "5,2": 12,
+      "5,3": 12,
+      "5,4": 12,
+      "5,5": 12,
+      "5,6": 12,
+      "5,7": 12,
+      "5,8": 13,
+      "5,9": 6,
+      "5,10": 6,
+      "5,11": 6,
+      "5,12": 6,
+      "5,13": 6,
+      "5,14": 7,
+      "6,1": 12,
+      "6,2": 12,
+      "6,3": 12,
+      "6,4": 12,
+      "6,5": 12,
+      "6,6": 12,
+      "6,7": 12,
+      "6,8": 14,
+      "6,9": 15,
+      "6,10": 15,
+      "6,11": 15,
+      "6,12": 15,
+      "6,13": 15,
+      "6,14": 16,
+      "9,1": 17,
+      "9,12": 18,
       "9,13": 0,
       "9,14": 0,
       "9,15": 0,
@@ -416,26 +464,44 @@
       "9,18": 0,
       "9,19": 0,
       "9,20": 0,
-      "10,1": 13,
-      "10,2": 13,
-      "10,3": 13,
-      "10,4": 13,
-      "10,5": 13,
-      "10,6": 13,
-      "10,7": 13,
-      "10,8": 13,
-      "10,9": 13,
-      "10,10": 13,
-      "10,11": 13,
-      "10,12": 13,
-      "10,13": 13,
-      "10,14": 13,
-      "10,15": 13,
-      "10,16": 13,
-      "10,17": 13,
-      "10,18": 13,
-      "10,19": 13,
-      "10,20": 13
+      "10,12": 0,
+      "10,13": 0,
+      "10,14": 0,
+      "10,15": 0,
+      "10,16": 0,
+      "10,17": 0,
+      "10,18": 0,
+      "10,19": 0,
+      "10,20": 0,
+      "11,12": 0,
+      "11,13": 0,
+      "11,14": 0,
+      "11,15": 0,
+      "11,16": 0,
+      "11,17": 0,
+      "11,18": 0,
+      "11,19": 0,
+      "11,20": 0,
+      "12,1": 19,
+      "12,2": 19,
+      "12,3": 19,
+      "12,4": 19,
+      "12,5": 19,
+      "12,6": 19,
+      "12,7": 19,
+      "12,8": 19,
+      "12,9": 19,
+      "12,10": 19,
+      "12,11": 19,
+      "12,12": 19,
+      "12,13": 19,
+      "12,14": 19,
+      "12,15": 19,
+      "12,16": 19,
+      "12,17": 19,
+      "12,18": 19,
+      "12,19": 19,
+      "12,20": 19
     },
     "SheetStyle": {
       "FontFamily": 0
@@ -445,10 +511,12 @@
     "0,6,1,5",
     "3,1,2,7",
     "0,12,1,5",
-    "7,1,3,9",
-    "7,12,3,9",
+    "9,1,3,9",
+    "9,12,3,9",
     "3,8,2,7",
-    "0,20,1,2"
+    "0,20,1,2",
+    "5,1,2,7",
+    "5,8,2,7"
   ],
   "PageInfo": {
     "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
@@ -467,10 +535,11 @@
       ]
     },
     "RowBreakLines": [],
-    "RepeatRangeSettings": []
+    "RepeatRangeSettings": [],
+    "RelatedDataTableName": "ttanam"
   },
   "PrintInfo": {
     "PaperSize": {},
     "Margin": {}
   }
-}//3h8vX7tGWy5sFX+Vun53KZVQkPBYcwXQBI5oUqSTv9rIWEqfyTeYQELl1Aqec5LgJR4wb5POXrGjpmYaZOUeQyVvUUJCoZPct3TQKmP8q8eA8nTZf5cWejUZN7vOEzWq26/46prB2LRedSX42qAm1W1tkGdW1RaH4uJmqLl28n+NG/Hj+99MGXes3vwl1qo1NCzztpd5pLBW7WIZZ68MGbIJi0l0oCRygTxqDxRaZ761A5d3uuTnR22DZEkflD+R7izkZ4kkH4YfF0XTQdCy1KAnrunA/5CHENyfghq4oyIL5AhHxGDN6CVO+dAVPwUR9spVtMbSWiWH1BpVNB9n16rPXrRqmJmzZy4X5OBVACk5NzKPnxTbKFkZKJSAlL9Atbnau4TR0zT7pS9o+d/AnA9x6ndzfaD5x9SuII35oMQuvbxcDewq2XHxR80LhWeNcpEEcrFmL69QLKXS8CUsp7UERL2Sb/1QbzAsb1DzGj1+KJBSfBiyyPEUM8KZhanJJnDGe0OVF86IR4TG3LTuaFeIY1qH7LcHbV4CTSDcjTWBuXBVIKW5ppBx+rNuikPvKpdUuopki04svoVlU4qRsnm0iNcTpeApwlBMDna7WaGrwrhljaEYYQB/BpxTNdjV/zrEl60LIacd/Ss2k3CTqSD6nQSxOwaHfcanxwGaOTlYQZpPft6z5WZeMKelCSmcCu3HgCSJus3XQ/C4FU+F/bhMYEGmS5Ai1Gm2TgVO+4MpFxbnJPbCWZhX/fRP/lJDvo/zohZSV2lu2rpcnZqOVsWLxuSFfQEgMXDmmJXfvexfYX7kXQNsp9AsHhzkrmjhIQovH9aohB3z1qSMvd1t5gsO9e/C2MY5MG6omk+NcF0njGiRvD+YcV3JnJT1EgkLx8GViIWUa2Qx0zAGbMEZGg==|920
+}//mQH/T1yHrdP9DBLkSoLiePRYU+pXbCBBbZWFqYdlZiefs+/NFw9WE1VnHqkmMaSCF4fP4eE+3oXNToFKitAJ+U5ib2Hn+guCFO/jiv5XuOsHEQd+Jb+gQf5uJdCsM8Hx3ye3obrXqt/52/VKZK+ip9S3gfojofNBHxze7uftJbQPb4aNpUP54G9gDlyPRTYQsqI0rjxPp1PoFdMTlRqIV/u1Ue0/hgkh9rDP98nV47Grajuji29Sq6dKhcjT4jx5cpG4tLZetnnKabEWknVxeuZ70DvGduCAOj/eFwkoowlFCJuX8FGogmmbhQVkPvag7k3MSIDsEUBffIELS3gAKVCiZ17W43+dhvG2OLTkI4kVNjFau3WpgoS0hkl0CiG685mfrei+TMCra4AeETTnXTn5cEg/j1G/uDmqMm3+HaxYSoMT/W/AKnWUTFtMZYej2yMyBKt16Z56aGg1isDtYaAG7muj8FkngaiomIlWp5Op2sn4+4IDxcieMKG/U0M40OV2mkiK+BeOf+52zi6+ee3xJJYr3QEZUB1ffEdy2f9Aidq77gaoe+ncD0uhZUE1F8Lmb9EEYJYIV74MunbtdBHyh6NwD+traLCDwrWoptAWR+Sutdfm4qMSSF1bLuH4AKSzwFPBETpvT56ri62sL5G14EOAKoBXLt9LCZgmSOCRSCaIBf2u6sGB/I6YxAKvyS965WRi1F03TwnTAlWKbL2FPi1iqMqAhuJE5OmeE6gvhrdoFIsXLGcb1tCvJG1XFqWDbc9YlGA4Ewtzh7pBNwyMOJNQ3wUzhPEsZ/1JpRuFhUNk1JK/SLoZ2UfMU9IUk8od4zVh8GkDLnCdzQn/qCr1KqwtVYhM5yqF/4nJes0makerr9jaHhxwZYa4q4Jso0FuSJ+dxBa7EYvgT6uTeA==|920

@@ -141,17 +141,7 @@
   },
   {
     "ModuleName": "PCPage/棚卸開始登録",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-08-19T16:55:10.5415289+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\棚卸_\\棚卸開始登録.json",
-      "Pages\\棚卸_\\棚卸開始登録.rd"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "PCPage/棚卸入力画面",
@@ -163,17 +153,7 @@
   },
   {
     "ModuleName": "PCPage/集計画面",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-08-19T17:09:36.76922+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\集計画面.json",
-      "Pages\\集計画面.rd"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "PCPage/スマホデータ確認",
@@ -189,16 +169,7 @@
   },
   {
     "ModuleName": "ServerCommand/棚卸開始",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\999D4610",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-08-19T16:55:10.5407092+09:00",
-    "ModuleType": 15,
-    "ToRemoveFiles": [
-      "ServerCommands\\棚卸開始.json"
-    ]
+    "ModuleType": 15
   },
   {
     "ModuleName": "ServerCommand/部品数量集計",
