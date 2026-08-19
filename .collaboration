@@ -146,7 +146,7 @@
       "UserName": "UNITY\\999D4610",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-08-19T16:45:14.0939558+09:00",
+    "LockDateTime": "2026-08-19T16:55:10.5415289+09:00",
     "ModuleType": 1,
     "ToRemoveFiles": [
       "Pages\\棚卸_\\棚卸開始登録.json",
@@ -179,7 +179,16 @@
   },
   {
     "ModuleName": "ServerCommand/棚卸開始",
-    "ModuleType": 15
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\999D4610",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-19T16:55:10.5407092+09:00",
+    "ModuleType": 15,
+    "ToRemoveFiles": [
+      "ServerCommands\\棚卸開始.json"
+    ]
   },
   {
     "ModuleName": "ServerCommand/部品数量集計",
