@@ -5,7 +5,16 @@
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_data",
-    "ModuleType": 7
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-20T12:00:07.7918578+09:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\ymia_t_tanaoroshi_data.json"
+    ]
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_file",
@@ -13,7 +22,16 @@
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_datainput",
-    "ModuleType": 7
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-20T12:00:07.7920952+09:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\ymia_t_tanaoroshi_datainput.json"
+    ]
   },
   {
     "ModuleName": "Table/mhinban",
@@ -21,11 +39,29 @@
   },
   {
     "ModuleName": "Table/ttanam",
-    "ModuleType": 7
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-20T12:00:07.792086+09:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\ttanam.json"
+    ]
   },
   {
     "ModuleName": "Table/ymia_t_tanaoroshi_datainput2ji",
-    "ModuleType": 7
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-20T12:00:07.792099+09:00",
+    "ModuleType": 7,
+    "ToRemoveFiles": [
+      "Tables\\ymia_t_tanaoroshi_datainput2ji.json"
+    ]
   },
   {
     "ModuleName": "TableView/ymia_v_mhinban_lastest",
@@ -279,7 +315,17 @@
   },
   {
     "ModuleName": "TableView/ユーザー情報ビュー",
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-08-20T12:00:07.7922136+09:00",
     "ModuleType": 23,
+    "ToRemoveFiles": [
+      "Tables\\ユーザー情報ビュー.json",
+      "ForguncyDB.sqlite3"
+    ],
     "ExclusiveType": 0
   }
 ]
