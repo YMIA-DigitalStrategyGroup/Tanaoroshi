@@ -388,13 +388,13 @@
     "ModuleType": 23
   },
   {
-    "ModuleName": "ServerCommand/棚卸開始1",
+    "ModuleName": "ServerCommand/棚卸開始処理",
     "State": 3,
     "LockedBy": {
       "UserName": "UNITY\\AA121806",
       "Email": "example@example.com"
     },
-    "LockDateTime": "2026-08-24T10:54:04.4307419+09:00",
+    "LockDateTime": "2026-08-24T10:54:40.6939493+09:00",
     "ModuleType": 15
   },
   {
