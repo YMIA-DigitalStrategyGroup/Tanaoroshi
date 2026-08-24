@@ -94,7 +94,7 @@
                 }
               }
             },
-            "ID": "37657064dc2e41b08cd964df5ec1685a"
+            "ID": "9ae2364f7cea43e69466d728476978e1"
           },
           {
             "$type": "Forguncy.Model.ShowMessageCommand, ServerDesignerCommon",
@@ -133,7 +133,7 @@
                           "ConfirmIcon": 1
                         },
                         "CommandList": [],
-                        "ID": "e045d21b-b630-4985-810f-2a8e20302c6e"
+                        "ID": "4568cf50-07b2-44c7-ac82-60d6b0706eff"
                       },
                       {
                         "CommandList": [
@@ -141,12 +141,12 @@
                             "$type": "Forguncy.Model.StopCommand, ServerDesignerCommon"
                           }
                         ],
-                        "ID": "aa892aed-7449-441e-858d-d82cdfd3b422"
+                        "ID": "efde6de4-bb3e-4c33-a117-d6c880f79942"
                       }
                     ]
                   }
                 ],
-                "ID": "b3bd9e71-38a4-43d2-b27b-06828aef0a13"
+                "ID": "4c707f94-1482-4574-aecd-c8a264cc4690"
               }
             ]
           },
@@ -164,7 +164,7 @@
                 "CommandList": [
                   {
                     "$type": "Forguncy.Model.RequestServerCommand, ServerDesignerCommon",
-                    "ServerCommandName": "棚卸開始",
+                    "ServerCommandName": "棚卸開始処理",
                     "Parameters": [
                       {
                         "$type": "Forguncy.Model.RequestServerCommandObjectParam, ServerDesignerCommon",
@@ -191,7 +191,7 @@
                     "MessageFormula": "棚卸情報を読み込み、棚卸を開始します！！"
                   }
                 ],
-                "ID": "bdb9c8e3-814a-4b06-940e-818bc3d62a01"
+                "ID": "92c6fad1-589a-4917-8a07-6ae596e139b7"
               }
             ]
           }
@@ -542,4 +542,4 @@
     "PaperSize": {},
     "Margin": {}
   }
-}//mQH/T1yHrdP9DBLkSoLiePRYU+pXbCBBbZWFqYdlZiefs+/NFw9WE1VnHqkmMaSCF4fP4eE+3oXNToFKitAJ+U5ib2Hn+guCFO/jiv5XuOsHEQd+Jb+gQf5uJdCsM8Hx3ye3obrXqt/52/VKZK+ip9S3gfojofNBHxze7uftJbQPb4aNpUP54G9gDlyPRTYQsqI0rjxPp1PoFdMTlRqIV/u1Ue0/hgkh9rDP98nV47Grajuji29Sq6dKhcjT4jx5cpG4tLZetnnKabEWknVxeuZ70DvGduCAOj/eFwkoowlFCJuX8FGogmmbhQVkPvag7k3MSIDsEUBffIELS3gAKVCiZ17W43+dhvG2OLTkI4kVNjFau3WpgoS0hkl0CiG685mfrei+TMCra4AeETTnXTn5cEg/j1G/uDmqMm3+HaxYSoMT/W/AKnWUTFtMZYej2yMyBKt16Z56aGg1isDtYaAG7muj8FkngaiomIlWp5Op2sn4+4IDxcieMKG/U0M40OV2mkiK+BeOf+52zi6+ee3xJJYr3QEZUB1ffEdy2f9Aidq77gaoe+ncD0uhZUE1F8Lmb9EEYJYIV74MunbtdBHyh6NwD+traLCDwrWoptAWR+Sutdfm4qMSSF1bLuH4AKSzwFPBETpvT56ri62sL5G14EOAKoBXLt9LCZgmSOCRSCaIBf2u6sGB/I6YxAKvyS965WRi1F03TwnTAlWKbL2FPi1iqMqAhuJE5OmeE6gvhrdoFIsXLGcb1tCvJG1XFqWDbc9YlGA4Ewtzh7pBNwyMOJNQ3wUzhPEsZ/1JpRuFhUNk1JK/SLoZ2UfMU9IUk8od4zVh8GkDLnCdzQn/qCr1KqwtVYhM5yqF/4nJes0makerr9jaHhxwZYa4q4Jso0FuSJ+dxBa7EYvgT6uTeA==|920
+}//7As3vixE1oO8rDnSS2wGSf9x/98v0fjMOxUjZ/1bfzOE+YF9HYT8vVRx9whKk+T9OYni+x3c2fd5Em45Ky/bWvYP0otFyB9oEMqqOe1Cx8nO3Utl0pe4Wx1gyVi6ikazTc9oGCbpPht0AP8AHvWOZv7Ne0RMJQYX9AMTBLaykO0aoljTALVaoliBtNhfdP4lLJnRSURGpiLGE2I3GBc8XO77wXVK5/PL4Ulu4GZkR6vTMIaX51Yx6hBg7CDVokAzEhx17pS+QDIYvBnnXZkBsH8/33sIeIiQUVumbDb4TpSU6E+OfudtWeE/q1BDOfS/pklWaBPPwj9+Ix63XVjZC18rgeQF003iYu42m2TLDtAD6jjocR3yiZ/TPit957Ht8Y9kJ4H3ZjEwTKFPx1WBGZfs7VCSRgK2zJ/tPXjB3G946VLrSjWNCW5AJFCrmVj/NoRAAormhvuIHLiJ0UE1SM/BlsAhOcY90zsNKJXoGguLQx6tJue09+sB6GQ7/OqwQ2lL/2Zp4HCT1kFaTR6Hd+L47+35rdM+poBe5BSORJxqJbb683dTqFXeF0bmF3BCstbFQr3fJHm4W6gcK+9OTu0iBXU/1ltG6WuAMZ+1PRktXr2JyPqW71X7Get5Pqj7abhWBHik/WJWfeeyVskxFkFMjhkK0edjHs/iy5LU9jpJhWDZOcGjjp4NFzDyevPCDbPb4k2GdscJXlC36eOFqIBGpcLykJu/CRrOJWbQ4nwTt4jK/O8SH2C+usHvjGT7jP/5n8ykPbAfsoTLcKOw3x1CjIuggix2p0HYI81CFoonQvtYaiuhSffQe0E9Eh0NBXAQ4deKroSnP3GoEmtiBBTLjuP/RJUlNTnOoQIVST6mMBb4KLj6y0LMODtxy4wZM8e5h2gXvBB/OWepFI2Ydg==|920

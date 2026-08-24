@@ -1,0 +1,101 @@
+{
+  "Name": "棚卸開始処理",
+  "Enabled": true,
+  "Triggers": [
+    {
+      "$type": "Forguncy.SaveLoad.PostRequestTriggerSaveData, ServerDesignerCommon",
+      "Permission": {
+        "PermissionData": {
+          "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionData, Forguncy.RbacPermission.Core",
+          "permissionResource": {
+            "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionResource, Forguncy.RbacPermission.Core"
+          },
+          "permissionBindings": [
+            {
+              "$type": "Forguncy.RbacPermission.Core.Impl.ServerCommand.ServerCommandPermissionBinding, Forguncy.RbacPermission.Core",
+              "roleNames": [
+                "FGC_LoginUser"
+              ]
+            }
+          ]
+        }
+      },
+      "Parameters": [
+        {
+          "Name": "棚卸対象月",
+          "DataValidationInfo": {},
+          "TestData": "202608"
+        },
+        {
+          "Name": "Remacs棚卸番号",
+          "DataValidationInfo": {},
+          "TestData": "9"
+        }
+      ],
+      "InvokeTriggerTestData": {
+        "UserName": "Administrator"
+      }
+    }
+  ],
+  "Commands": [
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸対象月"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "delete from `ymia_t_tanaoroshi_data` where `TARGET_YEAR_MONTH`=?棚卸対象月",
+      "ID": "78ea6c639b7f4ba8b78b31cadc0b3081"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸対象月"
+          },
+          "Item2": 253
+        },
+        "Remacs棚卸番号": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=Remacs棚卸番号"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "INSERT INTO myymia.ymia_t_tanaoroshi_data (\r\n    TARGET_YEAR_MONTH,\r\n    TANABAN,\r\n    Z_FLAG,\r\n    AZUKARIKUBUN,\r\n    HINBAN,\r\n    ZAIKO_SU,\r\n    TANA_SU\r\n)\r\nSELECT \r\n    ?棚卸対象月 AS TARGET_YEAR_MONTH,             -- 対象年月\r\n    COALESCE(h.TANABAN, '') AS TANABAN,        -- 品番マスタのメイン棚番（棚番1）\r\n    0 AS Z_FLAG,                               -- 不良品フラグ（良品=0）\r\n    0 AS AZUKARIKUBUN,                         -- 預り区分\r\n    h.HINBAN,                                  -- 品番\r\n    0.0000 AS ZAIKO_SU,                        -- 初期在庫数（最初は0でセット）\r\n    NULL AS TANA_SU                            -- 棚卸数（初期値はNULL）\r\nFROM myymia.mhinban h\r\nWHERE h.KAITEI_SEQ_NBR = (\r\n    -- 品番マスタの最新の改訂通番のみを対象\r\n    SELECT MAX(h2.KAITEI_SEQ_NBR)\r\n    FROM myymia.mhinban h2\r\n    WHERE h2.HINBAN = h.HINBAN\r\n)\r\n-- 棚卸対象となっている有効な品番のみ\r\nAND h.TANAOROSHI_FLAG = 1",
+      "ID": "535af85fb68f436d8020d1d842b3a1ea"
+    },
+    {
+      "$type": "ServerDesignerCommon.Command.ExecuteSqlCommand, ServerDesignerCommon",
+      "ConnStrId": "MySql1",
+      "Params": {
+        "棚卸対象月": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=棚卸対象月"
+          },
+          "Item2": 253
+        },
+        "Remacs棚卸番号": {
+          "Item1": {
+            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+            "SerializeProperty": "=Remacs棚卸番号"
+          },
+          "Item2": 253
+        }
+      },
+      "SqlStatement": "UPDATE myymia.ymia_t_tanaoroshi_data t\r\nINNER JOIN (\r\n    -- 標準の棚卸明細テーブル(ttanam)から、指定された棚卸番号に紐づく在庫数を品番単位で合算\r\n    SELECT \r\n        HINBAN,\r\n        SUM(ZAIKO_SU) AS total_zaiko\r\n    FROM myymia.ttanam\r\n    WHERE TANA_NBR = ?Remacs棚卸番号\r\n    GROUP BY HINBAN\r\n) src ON t.HINBAN = src.HINBAN\r\nSET t.ZAIKO_SU = src.total_zaiko\r\nWHERE t.TARGET_YEAR_MONTH = ?棚卸対象月\r\n  AND t.Z_FLAG = 0                    -- 良品\r\n  AND t.AZUKARIKUBUN = 0              -- 預りなし（通常在庫）",
+      "ID": "1784eadbedd64b6298e96117726470bf"
+    }
+  ]
+}

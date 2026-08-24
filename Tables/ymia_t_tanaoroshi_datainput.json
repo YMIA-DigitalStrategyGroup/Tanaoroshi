@@ -99,6 +99,13 @@
       "ForeignTable": "ymia_t_tanaoroshi_datainput",
       "ForeignColumn": "HINBAN",
       "IsDetailTableRelation": false
+    },
+    {
+      "PrimaryTable": "ユーザー情報ビュー",
+      "PrimaryColumn": "ユーザー名",
+      "ForeignTable": "ymia_t_tanaoroshi_datainput",
+      "ForeignColumn": "TOROKUSHA_NAME",
+      "IsDetailTableRelation": false
     }
   ],
   "Indexes": []

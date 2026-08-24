@@ -1,0 +1,129 @@
+{
+  "Name": "ymia_v_ymia_tanaoroshi_remacsupload",
+  "Columns": [
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "Required": true,
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 10,
+      "Name": "対象年月",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "Required": true,
+      "DatabaseColumnType": "varchar",
+      "MaxLength": -1,
+      "Name": "在庫場所コード",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "Required": true,
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 20,
+      "Name": "品番",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 50,
+      "Name": "品名",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "Required": true,
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 20,
+      "Name": "棚番",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DefaultValue": 0,
+      "Required": true,
+      "DatabaseColumnType": "int",
+      "MaxLength": -1,
+      "Name": "Z分類",
+      "ColumnType": "System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 20,
+      "Name": "図番",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 50,
+      "Name": "型式",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 50,
+      "Name": "材質",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 50,
+      "Name": "規格",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DatabaseColumnType": "varchar",
+      "MaxLength": 50,
+      "Name": "メーカー",
+      "ColumnType": "System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DefaultValue": 0.0000,
+      "Required": true,
+      "DatabaseColumnType": "decimal",
+      "MaxLength": -1,
+      "Name": "在庫数",
+      "ColumnType": "System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DatabaseColumnType": "decimal",
+      "MaxLength": -1,
+      "Name": "棚卸数",
+      "ColumnType": "System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DatabaseColumnType": "decimal",
+      "MaxLength": -1,
+      "Name": "差異数",
+      "ColumnType": "System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    }
+  ],
+  "ExternalDatabaseInfo": {
+    "DataBaseType": "6db454c0-531c-4395-9122-921a18942902",
+    "ConnectionId": "MySql1",
+    "SourceTableName": "ymia_v_ymia_tanaoroshi_remacsupload",
+    "SourceTableSchema": "",
+    "CreateViewSql": "select `t`.`TARGET_YEAR_MONTH` AS `対象年月`,'' AS `在庫場所コード`,`t`.`HINBAN` AS `品番`,`h`.`HINMEI` AS `品名`,`t`.`TANABAN` AS `棚番`,`t`.`Z_FLAG` AS `Z分類`,`h`.`ZUBAN` AS `図番`,`h`.`KEISHIKI` AS `型式`,`h`.`ZAISHITSU` AS `材質`,`h`.`KIKAKU` AS `規格`,`h`.`MAKER` AS `メーカー`,`t`.`ZAIKO_SU` AS `在庫数`,`t`.`TANA_SU` AS `棚卸数`,(`t`.`ZAIKO_SU` - `t`.`TANA_SU`) AS `差異数` from (`ymia_t_tanaoroshi_data` `t` left join (select `h1`.`HINBAN` AS `HINBAN`,`h1`.`HINMEI` AS `HINMEI`,`h1`.`ZUBAN` AS `ZUBAN`,`h1`.`KEISHIKI` AS `KEISHIKI`,`h1`.`ZAISHITSU` AS `ZAISHITSU`,`h1`.`KIKAKU` AS `KIKAKU`,`h1`.`MAKER` AS `MAKER` from `mhinban` `h1` where (`h1`.`KAITEI_SEQ_NBR` = (select max(`h2`.`KAITEI_SEQ_NBR`) from `mhinban` `h2` where (`h2`.`HINBAN` = `h1`.`HINBAN`)))) `h` on((`t`.`HINBAN` = `h`.`HINBAN`)))",
+    "ViewInfo": {
+      "ViewName": "ymia_v_ymia_tanaoroshi_remacsupload",
+      "IsUpdatable": true,
+      "QueryColumns": []
+    }
+  },
+  "PrimaryKey": [
+    "対象年月",
+    "品番",
+    "Z分類"
+  ],
+  "Indexes": []
+}

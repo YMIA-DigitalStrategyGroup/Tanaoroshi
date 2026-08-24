@@ -110,7 +110,8 @@
                   }
                 },
                 {
-                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                  "CompareType": 6,
                   "ColumnBindingInfo": {
                     "TableName": "ymia_t_tanaoroshi_datainput",
                     "ColumnName": "HINBAN",
@@ -122,7 +123,8 @@
                   }
                 },
                 {
-                  "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+                  "$type": "ForguncyDataAccess.TextCESqlCondition, ForguncyDataAccess",
+                  "CompareType": 6,
                   "ColumnBindingInfo": {
                     "TableName": "ymia_t_tanaoroshi_datainput",
                     "ColumnName": "TANABAN",
@@ -133,10 +135,9 @@
                     "SerializeProperty": "=スマホデータ確認!M6"
                   }
                 }
-              ],
-              "RelationType": 1
+              ]
             },
-            "ID": "b5e7772db2094f72b1a9c204c1dbbe2c"
+            "ID": "45f904b57578413bb9cbebc36f0a03e3"
           }
         ],
         "Text": "検索",
@@ -156,20 +157,13 @@
     },
     "5,12": {
       "CellType": {
-        "$type": "Forguncy.DropDownListCellType, ServerDesignerCommon",
-        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1",
-        "IsBounding": true,
-        "DataSource": "ymia_t_tanaoroshi_datainput2ji",
-        "ValueColumnBindingInfo": {
-          "TableName": "ymia_t_tanaoroshi_datainput2ji",
-          "ColumnName": "TANABAN",
-          "GUID": "513701fa-3f9d-4bf0-8e2c-c8ae5fae348f"
-        },
-        "DisplayColumnBindingInfo": {
-          "TableName": "ymia_t_tanaoroshi_datainput2ji",
-          "ColumnName": "TANABAN",
-          "GUID": "12f8b582-7928-4132-ae46-5b27db183b11"
-        }
+        "$type": "Forguncy.TextCellType, ServerDesignerCommon",
+        "SavedValidators": [
+          {
+            "$type": "Forguncy.CellTypes.Models.UniqueValidadator, ServerDesignerCommon"
+          }
+        ],
+        "TemplateKey": "_RS_LightLine_Translucent_SmallRoundCorner_Normal1"
       }
     },
     "7,3": {
@@ -229,7 +223,12 @@
       "BindingInfo": {
         "TableName": "ymia_t_tanaoroshi_datainput",
         "ColumnName": "TOROKUSHA_NAME",
-        "GUID": "761724f9-345c-48f0-92b8-dc1718eb6df1"
+        "GUID": "d39406ec-777a-476d-ba24-573046715f1e",
+        "RelationBinding": {
+          "RelatedTable": "ユーザー情報ビュー",
+          "RelatedColumn": "ユーザー名",
+          "DisplayColumn": "氏名"
+        }
       }
     },
     "34,3": {
@@ -254,7 +253,7 @@
                     "UpdateType": 3
                   }
                 ],
-                "ID": "a01c0bc1-cb71-4612-81ec-0bd20a531ca1"
+                "ID": "b378d892-58f4-40ed-86fa-b39ca19f4e38"
               }
             ]
           }
@@ -325,8 +324,17 @@
         "FontFamily": 1
       },
       {
+        "Background": 0,
         "FontFamily": 1,
         "Formatter": 3,
+        "BorderBottom": 0,
+        "BorderTop": 0,
+        "BorderLeft": 0,
+        "BorderRight": 0
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 4,
         "BorderBottom": 0,
         "BorderTop": 0,
         "BorderLeft": 0
@@ -344,21 +352,15 @@
       },
       {
         "FontFamily": 1,
-        "BorderBottom": 0,
-        "BorderTop": 0,
-        "BorderLeft": 0
-      },
-      {
-        "FontFamily": 1,
-        "HorizontalAlignment": 4
-      },
-      {
-        "FontFamily": 1,
-        "Formatter": 5
+        "HorizontalAlignment": 5
       },
       {
         "FontFamily": 1,
         "Formatter": 6
+      },
+      {
+        "FontFamily": 1,
+        "Formatter": 3
       }
     ],
     "Types": {
@@ -366,10 +368,10 @@
         "Accent 1 80",
         "Body",
         "black",
+        "[AUTO]General",
         "@",
         "Right",
-        "yyyy/m/d h:mm",
-        "[AUTO]General"
+        "yyyy/m/d h:mm"
       ],
       "Borders": [
         {
@@ -438,7 +440,7 @@
       "4,9": 1,
       "4,10": 1,
       "4,11": 1,
-      "4,12": 0,
+      "4,12": 9,
       "4,13": 1,
       "4,14": 1,
       "4,15": 1,
@@ -446,23 +448,33 @@
       "4,17": 1,
       "4,18": 1,
       "4,19": 1,
-      "5,3": 9,
-      "5,4": 10,
-      "5,5": 10,
-      "5,6": 10,
-      "5,7": 10,
-      "5,8": 10,
-      "5,9": 10,
-      "5,10": 10,
-      "5,11": 11,
-      "5,12": 12,
-      "5,13": 10,
-      "5,14": 10,
-      "5,15": 10,
-      "5,16": 10,
-      "5,17": 10,
-      "5,18": 10,
+      "4,20": 1,
+      "4,22": 8,
+      "4,23": 8,
+      "4,24": 8,
+      "4,25": 8,
+      "5,3": 10,
+      "5,4": 11,
+      "5,5": 11,
+      "5,6": 11,
+      "5,7": 11,
+      "5,8": 11,
+      "5,9": 11,
+      "5,10": 11,
+      "5,11": 12,
+      "5,12": 10,
+      "5,13": 11,
+      "5,14": 11,
+      "5,15": 11,
+      "5,16": 11,
+      "5,17": 11,
+      "5,18": 11,
       "5,19": 11,
+      "5,20": 12,
+      "5,22": 8,
+      "5,23": 8,
+      "5,24": 8,
+      "5,25": 8,
       "7,3": 8,
       "7,4": 8,
       "7,5": 8,
@@ -485,14 +497,6 @@
       "7,22": 8,
       "7,23": 8,
       "7,30": 8,
-      "7,31": 8,
-      "7,32": 8,
-      "7,33": 8,
-      "7,34": 8,
-      "7,35": 8,
-      "7,36": 8,
-      "7,37": 8,
-      "7,38": 8,
       "8,3": 8,
       "8,4": 8,
       "8,5": 8,
@@ -515,14 +519,6 @@
       "8,22": 8,
       "8,23": 14,
       "8,30": 8,
-      "8,31": 8,
-      "8,32": 8,
-      "8,33": 8,
-      "8,34": 8,
-      "8,35": 8,
-      "8,36": 8,
-      "8,37": 8,
-      "8,38": 8,
       "9,3": 8,
       "9,4": 8,
       "9,5": 8,
@@ -1503,18 +1499,14 @@
   "Spans": [
     "34,3,2,5",
     "4,3,1,9",
-    "4,12,1,8",
     "5,3,1,9",
-    "5,12,1,8",
     "1,3,2,9",
     "1,12,2,8",
-    "4,22,2,4",
     "8,3,1,2",
     "8,5,1,8",
     "8,13,1,5",
     "8,18,1,5",
     "9,3,24,36",
-    "8,30,1,9",
     "8,23,1,7",
     "34,10,2,5",
     "7,3,1,2",
@@ -1522,7 +1514,11 @@
     "7,13,1,5",
     "7,18,1,5",
     "7,23,1,7",
-    "7,30,1,9"
+    "8,30,1,9",
+    "7,30,1,9",
+    "4,12,1,9",
+    "5,12,1,9",
+    "4,22,2,4"
   ],
   "PageInfo": {
     "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
@@ -1566,4 +1562,4 @@
     "PaperSize": {},
     "Margin": {}
   }
-}//hD7Pue2BMjwjjGnXSxNEG1HrsuFdAPZQ+fUfCi89aXINhBfw0cnmqnFI2VUjmYuEZbQ8PtQhJeibUotkIciRZ8dbimrw+MsNBiMxML9oTH+kVHf0du797rCwWMz9R/FYjue8RjefWPRKBgp0YW5/JMtm7NCh1+BSszwsntuJjE5zAficpGpkUugfXqNDqYf8mL0atQrc/DET2cm1Yloowi5leNCw8xXIr36mQEYr//TDJNrT1h7kkp4QTsmmUCnUWqjIBlR18/QBUwPG9KtOgeA66cVCR7nMVk+w7ren3fHqr6+9/aikXyl+K52WKAYiKith+TUheFfsDDRrvpzuan7aUJM6yAshK07GrrROhvB4Jd2iypA3hcTUHgLlPYZOPze10XnsEvyQgV5HAujVPjmBEWTxpmuH/HS6gHdeT5CDeS4WxgMq85NYIPFKmd84Hl0mkZ+6NGqD/5HHU0TMqcdVnNvgUsAnRAbJT6AYq9BiBkx4l9Kjx5awadd82UnggI3rs+y5yIXqR1jL6JxHAntoukYAMjsbXAt0QGGidq+855NROqRu5K8oi7S4cLqxzvQt1LypjFhCvGit0nlKyk1RfCveEgkwo0ereAdiZ0cMTsQkw5qwYa2GmQQvys6RCLyYVBSQ7aPGjJpntFYWusQJQhb8qhKsGeAFJc4+LqSroOEcbza9tO3hkrgF+D4tXnr/zZegDcJCfgdEawgIN+BzMzm3aoKfJedX704SPLR7x57Wn+WmyWpH1oHQoLk2HCXh/fCBIkngJIVFIqrJNbzpqHXUeVShPFB+W8qTWNanQnQy8QGTV4yYQCuhv7ePIgRGlbadB+HQOcqzP+J1xChlFSuYGykIlOgtpBsZoJd069gmlz1wBAzsECf8hPVsasDvUMdP/HAYGjnbRowiBw==|920
+}//QcI0YyvY7BaYymMC4nsDjgxvcpBM4EOUcGXjw9Ixfouoc5uoaO1cDpQwMCsyUB5bcutZk3vQJkMNvSs+wQSQZJqdqBUGawwk5TPJGa2O9doyzCepeDB7OJ00hZTGwGMlca49tW244V3CE9dhr/XiqEQSDgXcP6qDKMaDCJRYPjpHGlqC0F5mR0izy+qIjmv2dMJDWtSCwssRFsFEbziw+FLqE6/KwKs/awkhRk5AQi2GVu9D18K4hCiTAAwMQgK8IbQYlHOis72xgjLzeFHgQm9sFRfHpspvWg2PYf71f+5csYnojXtwODvrGHo2jDAaBQdky0jLu8Nn7KCWd3iK9bbz9jv0IMkZBDs26XPwTmjJNypiyrEX3i8yC6az0iW/u3viiNCd9G1mMFRJzoRFhV2PT0szI32KubcCkoqRcCd0UtSqt6onsMvMAqA5jmzQlvxmCF1Doshx2/UmjNHfEvZc5JjdIaN+8+XQKstAaVYzHzNogu7fCdHXd8WZRnM/JQ7mKnhbLjXHPs3DJ95LlnwrjtferY7RAAnddlxJEjjR5wmuYOixDili91L9IainQV2KkuhowTSdqGlfkD2d786GoCG3nN9FO1O5A+2y4sawuNaLAYWHkjof5Nu4R9ZYsx7c/eL4JuLJT+ooDtAOF/QiMC79ou71EfhfgrQBF7EM+ToDHgGaThTULMJXLQnYylOiJQIduNd11uq3suoJ4uMYa0OpamwXHAOmqSqF8n+fP3mY52wJoNCZ/j/lj2oSRGIS/fxjsC7XyHRxXuSPa8u3WAHdcC/UgIdQ3gXT4m0bWinSsZsgUXo1qxBjFyft17dw17f76HT3xWmP+NWTtTUcirgPReDH9904wAUNGwJRRI7dVJkX5SslaMOI/ZKXQsafW6uCJiisgwHlgnLuKg==|920
