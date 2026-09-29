@@ -4,6 +4,6 @@
   "RowCount": 13,
   "Formulas": {
     "0,6": "TODAY()",
-    "5,8": "ODATA(\"ttanam?$select=TANAM_NBR&$top=1&$orderby=TANAM_NBR desc\")"
+    "5,8": "ODATA(\"ttana?$select=TANA_NBR&$top=1&$orderby=TANA_NBR desc\")"
   }
 }
