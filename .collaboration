@@ -288,7 +288,16 @@
   },
   {
     "ModuleName": "ServerCommand/棚卸開始処理",
-    "ModuleType": 15
+    "State": 1,
+    "LockedBy": {
+      "UserName": "UNITY\\AA121806",
+      "Email": "example@example.com"
+    },
+    "LockDateTime": "2026-09-29T14:07:49.2087764+09:00",
+    "ModuleType": 15,
+    "ToRemoveFiles": [
+      "ServerCommands\\棚卸開始処理.json"
+    ]
   },
   {
     "ModuleName": "ServerCommand/棚卸開始_旧バージョン",
