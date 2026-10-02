@@ -153,17 +153,7 @@
   },
   {
     "ModuleName": "PCPage/集計画面",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-10-02T14:26:20.9524728+09:00",
-    "ModuleType": 1,
-    "ToRemoveFiles": [
-      "Pages\\集計画面.json",
-      "Pages\\集計画面.rd"
-    ]
+    "ModuleType": 1
   },
   {
     "ModuleName": "PCPage/スマホデータ確認",
@@ -296,16 +286,7 @@
   },
   {
     "ModuleName": "TableView/ymia_v_ymia_tanaoroshi_remacsupload",
-    "State": 1,
-    "LockedBy": {
-      "UserName": "UNITY\\AA121806",
-      "Email": "example@example.com"
-    },
-    "LockDateTime": "2026-10-02T14:26:05.0987767+09:00",
-    "ModuleType": 23,
-    "ToRemoveFiles": [
-      "Tables\\ymia_v_ymia_tanaoroshi_remacsupload.json"
-    ]
+    "ModuleType": 23
   },
   {
     "ModuleName": "Table/ttana",

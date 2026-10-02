@@ -35,7 +35,8 @@
     "36,2": "集計",
     "36,10": "スマホデータ確認",
     "36,21": "Excel出力",
-    "36,29": "Remacs取込用\r\nExcel出力"
+    "36,29": "Remacs取込用\r\nExcel出力",
+    "40,22": "預り区分"
   },
   "Formulas": {
     "8,47": "IF(ISERROR(BH9),\"-\",BH9)",
@@ -289,7 +290,7 @@
                     "MessageFormula": "集計処理が完了しました！！"
                   }
                 ],
-                "ID": "f32a0a50-18d5-41de-bf93-15d9945f4d6b"
+                "ID": "ce7e18da-5bac-4d59-99f6-14bf5c45b2f4"
               }
             ]
           }
@@ -338,7 +339,7 @@
                     "IsOnlyExportValue": false
                   }
                 ],
-                "ID": "c301560b-37a9-498e-a65b-ccf3b7f0db38"
+                "ID": "c708b267-705f-41e2-a52f-5b69459416f8"
               }
             ]
           }
@@ -374,7 +375,7 @@
                     "MessageFormula": "Remacsにアップロードする棚卸情報をダウンロードしました！！"
                   }
                 ],
-                "ID": "4d73725f-1754-43fd-8d9f-5f0c56c4d3b1"
+                "ID": "16f063e1-3f8f-48fb-bd23-9d5fdcba20ea"
               }
             ]
           }
@@ -396,18 +397,33 @@
         "RowIndex": 40,
         "ColumnIndex": 2,
         "RowCount": 4,
-        "ColumnCount": 52,
+        "ColumnCount": 57,
         "SqlCondition": {
-          "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
-          "ColumnBindingInfo": {
-            "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
-            "ColumnName": "対象年月",
-            "GUID": "49af687b-3e7d-4630-9186-a79f5062bdac"
-          },
-          "Value": {
-            "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
-            "SerializeProperty": "=集計画面!N2"
-          }
+          "$type": "ForguncyDataAccess.RelationSqlCondition, ForguncyDataAccess",
+          "SubConditions": [
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "ColumnBindingInfo": {
+                "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
+                "ColumnName": "対象年月",
+                "GUID": "49af687b-3e7d-4630-9186-a79f5062bdac"
+              },
+              "Value": {
+                "$type": "Forguncy.Model.FormulaReferObject, ServerDesignerCommon",
+                "SerializeProperty": "=集計画面!N2"
+              }
+            },
+            {
+              "$type": "ForguncyDataAccess.GeneralCESqlCondition, ForguncyDataAccess",
+              "CompareType": 3,
+              "ColumnBindingInfo": {
+                "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
+                "ColumnName": "棚卸数",
+                "GUID": "c9728ff0-c605-4461-a75d-11e20c3bf702"
+              },
+              "Value": "0"
+            }
+          ]
         },
         "TopCondition": null,
         "ListViewStyleName": "_RS_Medium2",
@@ -459,6 +475,13 @@
       }
     },
     "41,22": {
+      "BindingInfo": {
+        "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
+        "ColumnName": "預かり区分",
+        "GUID": "68494957-cd7b-43f5-85d1-516fa4bdeeae"
+      }
+    },
+    "41,27": {
       "NameUsedInJavaScript": "図番",
       "BindingInfo": {
         "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
@@ -466,7 +489,7 @@
         "GUID": "66052971-9622-4bbe-9ffa-2dbb517690ab"
       }
     },
-    "41,26": {
+    "41,31": {
       "NameUsedInJavaScript": "型式",
       "BindingInfo": {
         "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
@@ -474,7 +497,7 @@
         "GUID": "af2135c7-9929-43d1-87bb-04794205e2ce"
       }
     },
-    "41,30": {
+    "41,35": {
       "NameUsedInJavaScript": "材質",
       "BindingInfo": {
         "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
@@ -482,7 +505,7 @@
         "GUID": "12e2463f-a0b8-46f0-a8a8-26e241370db0"
       }
     },
-    "41,34": {
+    "41,39": {
       "NameUsedInJavaScript": "規格",
       "BindingInfo": {
         "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
@@ -490,7 +513,7 @@
         "GUID": "3935cbb1-deae-44ec-a248-28770982e14e"
       }
     },
-    "41,38": {
+    "41,43": {
       "NameUsedInJavaScript": "メーカー",
       "BindingInfo": {
         "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
@@ -498,7 +521,7 @@
         "GUID": "797f22c0-3bb6-46ea-9f15-a8e1bbb6e1a6"
       }
     },
-    "41,42": {
+    "41,47": {
       "NameUsedInJavaScript": "在庫数",
       "BindingInfo": {
         "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
@@ -506,7 +529,7 @@
         "GUID": "f9345ebf-4408-4140-bd6e-8b29a62412b6"
       }
     },
-    "41,46": {
+    "41,51": {
       "NameUsedInJavaScript": "棚卸数",
       "BindingInfo": {
         "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
@@ -514,7 +537,7 @@
         "GUID": "bbe562c5-59e5-4be2-be17-12beb9ec3f77"
       }
     },
-    "41,50": {
+    "41,55": {
       "NameUsedInJavaScript": "差異数",
       "BindingInfo": {
         "TableName": "ymia_v_ymia_tanaoroshi_remacsupload",
@@ -668,6 +691,9 @@
         "FontFamily": 1,
         "FontSize": 14.67,
         "WordWrap": true
+      },
+      {
+        "FontFamily": 1
       },
       {
         "Formatter": 8,
@@ -2493,7 +2519,71 @@
       "37,24": 8,
       "37,25": 8,
       "37,26": 8,
-      "41,18": 25
+      "40,27": 25,
+      "40,28": 25,
+      "40,29": 25,
+      "40,30": 25,
+      "40,31": 25,
+      "40,32": 25,
+      "40,33": 25,
+      "40,34": 25,
+      "40,35": 25,
+      "40,36": 25,
+      "40,37": 25,
+      "40,38": 25,
+      "40,39": 25,
+      "40,40": 25,
+      "40,41": 25,
+      "40,42": 25,
+      "40,43": 25,
+      "40,44": 25,
+      "40,45": 25,
+      "40,46": 25,
+      "40,47": 25,
+      "40,48": 25,
+      "40,49": 25,
+      "40,50": 25,
+      "40,51": 25,
+      "40,52": 25,
+      "40,53": 25,
+      "40,54": 25,
+      "40,55": 25,
+      "40,56": 25,
+      "40,57": 25,
+      "40,58": 25,
+      "41,18": 26,
+      "41,27": 25,
+      "41,28": 25,
+      "41,29": 25,
+      "41,30": 25,
+      "41,31": 25,
+      "41,32": 25,
+      "41,33": 25,
+      "41,34": 25,
+      "41,35": 25,
+      "41,36": 25,
+      "41,37": 25,
+      "41,38": 25,
+      "41,39": 25,
+      "41,40": 25,
+      "41,41": 25,
+      "41,42": 25,
+      "41,43": 25,
+      "41,44": 25,
+      "41,45": 25,
+      "41,46": 25,
+      "41,47": 25,
+      "41,48": 25,
+      "41,49": 25,
+      "41,50": 25,
+      "41,51": 25,
+      "41,52": 25,
+      "41,53": 25,
+      "41,54": 25,
+      "41,55": 25,
+      "41,56": 25,
+      "41,57": 25,
+      "41,58": 25
     },
     "SheetStyle": {
       "FontFamily": 1
@@ -2542,23 +2632,25 @@
     "41,14,1,4",
     "40,18,1,4",
     "41,18,1,4",
-    "40,22,1,4",
-    "41,22,1,4",
-    "40,26,1,4",
-    "41,26,1,4",
-    "40,30,1,4",
-    "41,30,1,4",
-    "40,34,1,4",
-    "41,34,1,4",
-    "40,38,1,4",
-    "41,38,1,4",
-    "40,42,1,4",
-    "41,42,1,4",
-    "40,46,1,4",
-    "41,46,1,4",
-    "40,50,1,4",
-    "41,50,1,4",
-    "42,2,2,52"
+    "42,2,2,57",
+    "40,27,1,4",
+    "41,27,1,4",
+    "40,31,1,4",
+    "41,31,1,4",
+    "40,35,1,4",
+    "41,35,1,4",
+    "40,39,1,4",
+    "41,39,1,4",
+    "40,43,1,4",
+    "41,43,1,4",
+    "40,47,1,4",
+    "41,47,1,4",
+    "40,51,1,4",
+    "41,51,1,4",
+    "40,55,1,4",
+    "41,55,1,4",
+    "41,22,1,5",
+    "40,22,1,5"
   ],
   "PageInfo": {
     "$type": "Forguncy.Model.Pages.NormalPage, ServerDesignerCommon",
@@ -2584,4 +2676,4 @@
     "PaperSize": {},
     "Margin": {}
   }
-}//QMujEeuGstNT56mn9soq7Vl31OxX6wVy6eop5fBHilF23q/Efe1hPi4UuyYMMGgAsjVhyocapk2uItQujJmPz1w2xUWIWBO+bP1ZyYd6Fj7iQuiZd9XKN5Ejeq2UMw97YHOD6aPB45BQ8iwAC9wTVMHUnO9pDkwKByPBHGZOjPBoxItiBtHak9e6sDgXqullUE1ZUG0CvEtBqmIDPTCqPu/yHqYp13EMw1diP9Mn/iRMM74HIukLq/ey0wWcLhOaUb85DBSCIjOrU87khYP9vj136RDTGhl4IFOBRxuszOZZdeZ5GUci4a8d2FdoIToAKsbDtg8TiiNi7v+LLZX4sQ1p1bepuLI5xV0s7+WUs5wFPHnT577ZzAbE4+yEz2NB/ApwiTTlipQd2l0mqILWEArXR3zfbuF0D2UCTfcBy+6UHd6WgvbUpc9t0+xwjJPifQoBuq9PvjcY4mJr9TZkXiCTycVik8AyXZeNY0reciBhGMyGaTNunLGgUgJcf7XucWZ3OMeqxiBXWSZG/Dzl92hORBS86+U5LaDOb2XYWvPYgRY9SNiMPcQY3C7RNnJaduXdiqtQYHGfW1fhnY00POQjQaQQOzwHm6c56v8K+jAQ+MH4hqbM59NIYAoUs9zsXy/gkYaK0QSwFKw902XHFYtDf+yOce+eIzmYQWOGPWZnqnQNxgEY2OnQBNxy/405hEVL8qFQ+k6OlBoKDdZV09s7Tmg+sT5hr9kpNpc8MJD/Jx0vl8pZJri4awUuyCD8YcgNGR3IxPk5mjs0UuZ+iKC5Lz9GwxBIAlyBn4anI3RjyRkqhQm2NUSIvQ/7BF+33uFVBFT5JxQ27r90S0t+v5Dea8lMuT5adQSQ8Cg8VMiU7/nwdTVzap/Wt+uCtvUXMCsEgMQdWkb8IP74DBXXqg==|920
+}//W6CUSfOF6eUSEQ7HtypmFwZIr7XOo5EVZ67daGaMb4vGsAklbuo9I1H8Mf5hCP4Q8DptTQgu5M0wLhhvMX+NGqHTI+w+n1xubhVB8RaO/wXeJ3n+VPigW/Nu/ruxo/cYLXRaJci3YpXVddGADFbrzLn23XD5ouergOWjLfmDnZrc4h6wZcSuHjiyLnbeKXbe2rFTkJYfUdjYZuJ7MYRMWHUr1VyEo8cR4he/jCfh8Iq4q3POyNyqgSe90fZcHI7BfH7PygnjAK4IAutlc9pBIfWbt/6xt88GrUKBagQYRhGtulRhwvHrpLDvum8voUaJ6JDmkFrtWTMS9qyZsi3FBV3OPPMRohgHigzVTvcPuxJeGHdyDAvDX1qe4R9jAkyuMJQeCW72s+GBkIB/axSKPuDVf1TILZBZYiIheJz138jrTcLeHsP2HLw8rbDz/9+6AJ8wF1qX0Sg3dDNxeccvgKSbQyWSvn+Zg02rlx/WTfE0XphldQQtPzHGWOarjWpkqGzqaNKv7g/UA2nQ2kplKpjBZNfEXregT5YrQ1lYMkpgVwzzVmMk3vjKkdQueAJhIXHctoUl6sU8BW4FHqR/u3c+nrMVAJcixPjpFR1Itcvaf866DFFQ3hu/8UWzTSAjLczyNl/0GeL1f2MwIiPmID5Zp2B8/dH/5Oe8tLKAbK4zvJ+xVOEpPCyi2tgyLw0IC1Gdu8XHonigtzf3atL9DVvXpQ5GhCdxVfmwGZOlkvrOAgPN0REdfLmTcKEoOqKIl41oOoeqleKqxgWIIdiKDH7uvCXq0Vw1et/TrDMIGR193ZQ/WEeadn2XDiCKb6BNBwN7Q+hEMqx3VzPO7Bzkb8CTS5mI5tnDw/+Y9lb+rW6V4Lv9/PkOhNU4u97AQL53OxBeqUbGmY1JbTdUEb5xug==|920

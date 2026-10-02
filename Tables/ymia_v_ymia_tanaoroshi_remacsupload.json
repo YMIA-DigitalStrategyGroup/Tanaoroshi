@@ -51,6 +51,15 @@
     },
     {
       "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
+      "DefaultValue": 0,
+      "Required": true,
+      "DatabaseColumnType": "int",
+      "MaxLength": -1,
+      "Name": "預かり区分",
+      "ColumnType": "System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e"
+    },
+    {
+      "$type": "Forguncy.SaveLoad.BindingColumnSaveData, ServerDesignerCommon",
       "DatabaseColumnType": "varchar",
       "MaxLength": 20,
       "Name": "図番",
@@ -113,7 +122,7 @@
     "ConnectionId": "MySql1",
     "SourceTableName": "ymia_v_ymia_tanaoroshi_remacsupload",
     "SourceTableSchema": "",
-    "CreateViewSql": "select `t`.`TARGET_YEAR_MONTH` AS `対象年月`,'' AS `在庫場所コード`,`t`.`HINBAN` AS `品番`,`h`.`HINMEI` AS `品名`,`t`.`TANABAN` AS `棚番`,`t`.`Z_FLAG` AS `Z分類`,`h`.`ZUBAN` AS `図番`,`h`.`KEISHIKI` AS `型式`,`h`.`ZAISHITSU` AS `材質`,`h`.`KIKAKU` AS `規格`,`h`.`MAKER` AS `メーカー`,`t`.`ZAIKO_SU` AS `在庫数`,`t`.`TANA_SU` AS `棚卸数`,(`t`.`ZAIKO_SU` - `t`.`TANA_SU`) AS `差異数` from (`ymia_t_tanaoroshi_data` `t` left join (select `h1`.`HINBAN` AS `HINBAN`,`h1`.`HINMEI` AS `HINMEI`,`h1`.`ZUBAN` AS `ZUBAN`,`h1`.`KEISHIKI` AS `KEISHIKI`,`h1`.`ZAISHITSU` AS `ZAISHITSU`,`h1`.`KIKAKU` AS `KIKAKU`,`h1`.`MAKER` AS `MAKER` from `mhinban` `h1` where (`h1`.`KAITEI_SEQ_NBR` = (select max(`h2`.`KAITEI_SEQ_NBR`) from `mhinban` `h2` where (`h2`.`HINBAN` = `h1`.`HINBAN`)))) `h` on((`t`.`HINBAN` = `h`.`HINBAN`)))",
+    "CreateViewSql": "select `t`.`TARGET_YEAR_MONTH` AS `対象年月`,'' AS `在庫場所コード`,`t`.`HINBAN` AS `品番`,`h`.`HINMEI` AS `品名`,`t`.`TANABAN` AS `棚番`,`t`.`Z_FLAG` AS `Z分類`,`t`.`AZUKARIKUBUN` AS `預かり区分`,`h`.`ZUBAN` AS `図番`,`h`.`KEISHIKI` AS `型式`,`h`.`ZAISHITSU` AS `材質`,`h`.`KIKAKU` AS `規格`,`h`.`MAKER` AS `メーカー`,`t`.`ZAIKO_SU` AS `在庫数`,`t`.`TANA_SU` AS `棚卸数`,(`t`.`ZAIKO_SU` - `t`.`TANA_SU`) AS `差異数` from (`ymia_t_tanaoroshi_data` `t` left join (select `h1`.`HINBAN` AS `HINBAN`,`h1`.`HINMEI` AS `HINMEI`,`h1`.`ZUBAN` AS `ZUBAN`,`h1`.`KEISHIKI` AS `KEISHIKI`,`h1`.`ZAISHITSU` AS `ZAISHITSU`,`h1`.`KIKAKU` AS `KIKAKU`,`h1`.`MAKER` AS `MAKER` from `mhinban` `h1` where (`h1`.`KAITEI_SEQ_NBR` = (select max(`h2`.`KAITEI_SEQ_NBR`) from `mhinban` `h2` where (`h2`.`HINBAN` = `h1`.`HINBAN`)))) `h` on((`t`.`HINBAN` = `h`.`HINBAN`)))",
     "ViewInfo": {
       "ViewName": "ymia_v_ymia_tanaoroshi_remacsupload",
       "IsUpdatable": true,
@@ -123,7 +132,8 @@
   "PrimaryKey": [
     "対象年月",
     "品番",
-    "Z分類"
+    "Z分類",
+    "預かり区分"
   ],
   "Indexes": []
 }
